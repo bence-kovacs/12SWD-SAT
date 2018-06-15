@@ -63,7 +63,7 @@ Partial Class Form1
         Me.TbCntrl.Name = "TbCntrl"
         Me.TbCntrl.Padding = New System.Drawing.Point(20, 10)
         Me.TbCntrl.SelectedIndex = 0
-        Me.TbCntrl.Size = New System.Drawing.Size(777, 619)
+        Me.TbCntrl.Size = New System.Drawing.Size(837, 619)
         Me.TbCntrl.TabIndex = 1
         '
         'TabLoan
@@ -72,7 +72,7 @@ Partial Class Form1
         Me.TabLoan.Location = New System.Drawing.Point(4, 48)
         Me.TabLoan.Name = "TabLoan"
         Me.TabLoan.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabLoan.Size = New System.Drawing.Size(769, 567)
+        Me.TabLoan.Size = New System.Drawing.Size(829, 567)
         Me.TabLoan.TabIndex = 0
         Me.TabLoan.Text = "               Loan               "
         '
@@ -83,13 +83,13 @@ Partial Class Form1
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(769, 567)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "View"
+        Me.TabPage3.Text = "               View               "
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(894, 617)
+        Me.ClientSize = New System.Drawing.Size(834, 617)
         Me.Controls.Add(Me.TbCntrl)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
