@@ -52,6 +52,18 @@ Partial Class Form1
         Me.lblEquipment = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.lblEquipmentCategory = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabLoan.SuspendLayout()
         Me.TbCntrl.SuspendLayout()
@@ -80,6 +92,15 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Label12)
+        Me.TabPage3.Controls.Add(Me.Button4)
+        Me.TabPage3.Controls.Add(Me.Label11)
+        Me.TabPage3.Controls.Add(Me.Button3)
+        Me.TabPage3.Controls.Add(Me.Label10)
+        Me.TabPage3.Controls.Add(Me.Label9)
+        Me.TabPage3.Controls.Add(Me.ListBox4)
+        Me.TabPage3.Controls.Add(Me.ListBox3)
+        Me.TabPage3.Controls.Add(Me.Label8)
         Me.TabPage3.Location = New System.Drawing.Point(4, 40)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
@@ -90,6 +111,8 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker3)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.ListBox2)
@@ -161,11 +184,11 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(34, 16)
+        Me.Label3.Location = New System.Drawing.Point(5, 16)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(202, 37)
+        Me.Label3.Size = New System.Drawing.Size(308, 37)
         Me.Label3.TabIndex = 22
-        Me.Label3.Text = "LOAN DETAILS"
+        Me.Label3.Text = "RESERVATION DETAILS"
         '
         'ListBox2
         '
@@ -205,15 +228,15 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(105, 275)
+        Me.Label4.Location = New System.Drawing.Point(105, 238)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(116, 17)
+        Me.Label4.Size = New System.Drawing.Size(102, 17)
         Me.Label4.TabIndex = 17
-        Me.Label4.Text = "DATE OF RETURN"
+        Me.Label4.Text = "DATE OF LOAN"
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(51, 308)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(51, 275)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(236, 25)
         Me.DateTimePicker2.TabIndex = 16
@@ -361,6 +384,104 @@ Partial Class Form1
         Me.lblEquipmentCategory.TabIndex = 12
         Me.lblEquipmentCategory.Text = "EQUIPMENT CATEGORY"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(102, 318)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(116, 17)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "DATE OF RETURN"
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Location = New System.Drawing.Point(51, 352)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(236, 25)
+        Me.DateTimePicker3.TabIndex = 24
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(288, 25)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(154, 37)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "MY LOANS"
+        '
+        'ListBox3
+        '
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.ItemHeight = 17
+        Me.ListBox3.Location = New System.Drawing.Point(492, 132)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(250, 310)
+        Me.ListBox3.TabIndex = 24
+        '
+        'ListBox4
+        '
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.ItemHeight = 17
+        Me.ListBox4.Location = New System.Drawing.Point(236, 132)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.Size = New System.Drawing.Size(250, 310)
+        Me.ListBox4.TabIndex = 25
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(310, 101)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(113, 17)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "CURRENT LOANS"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(581, 101)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(86, 17)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "PAST LOANS"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(63, 162)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(83, 23)
+        Me.Button3.TabIndex = 28
+        Me.Button3.Text = "POPULATE"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(46, 132)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(120, 17)
+        Me.Label11.TabIndex = 29
+        Me.Label11.Text = "POPULATE LOANS"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(70, 225)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(76, 17)
+        Me.Label12.TabIndex = 31
+        Me.Label12.Text = "PRINT LIST"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(63, 255)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(83, 23)
+        Me.Button4.TabIndex = 30
+        Me.Button4.Text = "PRINT"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -371,6 +492,8 @@ Partial Class Form1
         Me.Controls.Add(Me.TbCntrl)
         Me.Name = "Form1"
         Me.Text = "Media Equipment Booking System"
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabLoan.ResumeLayout(False)
@@ -420,4 +543,15 @@ Partial Class Form1
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents lblEquipmentCategory As Label
     Friend WithEvents TbCntrl As TabControl
+    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Button3 As Button
 End Class
