@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Menu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,9 +25,18 @@ Partial Class Form1
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabLoan = New System.Windows.Forms.TabPage()
-        Me.TbCntrl = New System.Windows.Forms.TabControl()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
@@ -40,6 +49,7 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TabLoan = New System.Windows.Forms.TabPage()
         Me.lblLoanEquipmentInfo = New System.Windows.Forms.Label()
         Me.lblLoanDetails = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -52,23 +62,13 @@ Partial Class Form1
         Me.lblEquipment = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.lblEquipmentCategory = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TbCntrl = New System.Windows.Forms.TabControl()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.TabLoan.SuspendLayout()
-        Me.TbCntrl.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabLoan.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TbCntrl.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -109,6 +109,88 @@ Partial Class Form1
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "               View               "
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(70, 225)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(76, 17)
+        Me.Label12.TabIndex = 31
+        Me.Label12.Text = "PRINT LIST"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(63, 255)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(83, 23)
+        Me.Button4.TabIndex = 30
+        Me.Button4.Text = "PRINT"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(46, 132)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(120, 17)
+        Me.Label11.TabIndex = 29
+        Me.Label11.Text = "POPULATE LOANS"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(63, 162)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(83, 23)
+        Me.Button3.TabIndex = 28
+        Me.Button3.Text = "POPULATE"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(581, 101)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(86, 17)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "PAST LOANS"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(310, 101)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(113, 17)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "CURRENT LOANS"
+        '
+        'ListBox4
+        '
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.ItemHeight = 17
+        Me.ListBox4.Location = New System.Drawing.Point(236, 132)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.Size = New System.Drawing.Size(250, 310)
+        Me.ListBox4.TabIndex = 25
+        '
+        'ListBox3
+        '
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.ItemHeight = 17
+        Me.ListBox3.Location = New System.Drawing.Point(492, 132)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(250, 310)
+        Me.ListBox3.TabIndex = 24
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(288, 25)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(154, 37)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "MY LOANS"
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Label7)
@@ -133,42 +215,21 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "               Reserve               "
         '
-        'TabLoan
+        'Label7
         '
-        Me.TabLoan.BackColor = System.Drawing.Color.Transparent
-        Me.TabLoan.Controls.Add(Me.lblLoanEquipmentInfo)
-        Me.TabLoan.Controls.Add(Me.lblLoanDetails)
-        Me.TabLoan.Controls.Add(Me.ListBox1)
-        Me.TabLoan.Controls.Add(Me.PictureBox1)
-        Me.TabLoan.Controls.Add(Me.btnClearLoan)
-        Me.TabLoan.Controls.Add(Me.btnConfirmLoan)
-        Me.TabLoan.Controls.Add(Me.Label1)
-        Me.TabLoan.Controls.Add(Me.DateTimePicker1)
-        Me.TabLoan.Controls.Add(Me.ComboBox2)
-        Me.TabLoan.Controls.Add(Me.lblEquipment)
-        Me.TabLoan.Controls.Add(Me.ComboBox1)
-        Me.TabLoan.Controls.Add(Me.lblEquipmentCategory)
-        Me.TabLoan.Location = New System.Drawing.Point(4, 40)
-        Me.TabLoan.Margin = New System.Windows.Forms.Padding(2)
-        Me.TabLoan.Name = "TabLoan"
-        Me.TabLoan.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabLoan.Size = New System.Drawing.Size(747, 483)
-        Me.TabLoan.TabIndex = 0
-        Me.TabLoan.Text = "               Loan               "
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(102, 318)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(116, 17)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "DATE OF RETURN"
         '
-        'TbCntrl
+        'DateTimePicker3
         '
-        Me.TbCntrl.Controls.Add(Me.TabLoan)
-        Me.TbCntrl.Controls.Add(Me.TabPage2)
-        Me.TbCntrl.Controls.Add(Me.TabPage3)
-        Me.TbCntrl.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbCntrl.Location = New System.Drawing.Point(11, 57)
-        Me.TbCntrl.Margin = New System.Windows.Forms.Padding(2)
-        Me.TbCntrl.Name = "TbCntrl"
-        Me.TbCntrl.Padding = New System.Drawing.Point(20, 10)
-        Me.TbCntrl.SelectedIndex = 0
-        Me.TbCntrl.Size = New System.Drawing.Size(755, 527)
-        Me.TbCntrl.TabIndex = 1
+        Me.DateTimePicker3.Location = New System.Drawing.Point(51, 352)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(236, 25)
+        Me.DateTimePicker3.TabIndex = 24
         '
         'Label2
         '
@@ -277,6 +338,29 @@ Partial Class Form1
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "EQUIPMENT CATEGORY"
         '
+        'TabLoan
+        '
+        Me.TabLoan.BackColor = System.Drawing.Color.Transparent
+        Me.TabLoan.Controls.Add(Me.lblLoanEquipmentInfo)
+        Me.TabLoan.Controls.Add(Me.lblLoanDetails)
+        Me.TabLoan.Controls.Add(Me.ListBox1)
+        Me.TabLoan.Controls.Add(Me.PictureBox1)
+        Me.TabLoan.Controls.Add(Me.btnClearLoan)
+        Me.TabLoan.Controls.Add(Me.btnConfirmLoan)
+        Me.TabLoan.Controls.Add(Me.Label1)
+        Me.TabLoan.Controls.Add(Me.DateTimePicker1)
+        Me.TabLoan.Controls.Add(Me.ComboBox2)
+        Me.TabLoan.Controls.Add(Me.lblEquipment)
+        Me.TabLoan.Controls.Add(Me.ComboBox1)
+        Me.TabLoan.Controls.Add(Me.lblEquipmentCategory)
+        Me.TabLoan.Location = New System.Drawing.Point(4, 40)
+        Me.TabLoan.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabLoan.Name = "TabLoan"
+        Me.TabLoan.Padding = New System.Windows.Forms.Padding(2)
+        Me.TabLoan.Size = New System.Drawing.Size(747, 483)
+        Me.TabLoan.TabIndex = 0
+        Me.TabLoan.Text = "               Loan               "
+        '
         'lblLoanEquipmentInfo
         '
         Me.lblLoanEquipmentInfo.AutoSize = True
@@ -384,105 +468,21 @@ Partial Class Form1
         Me.lblEquipmentCategory.TabIndex = 12
         Me.lblEquipmentCategory.Text = "EQUIPMENT CATEGORY"
         '
-        'Label7
+        'TbCntrl
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(102, 318)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 17)
-        Me.Label7.TabIndex = 25
-        Me.Label7.Text = "DATE OF RETURN"
+        Me.TbCntrl.Controls.Add(Me.TabLoan)
+        Me.TbCntrl.Controls.Add(Me.TabPage2)
+        Me.TbCntrl.Controls.Add(Me.TabPage3)
+        Me.TbCntrl.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbCntrl.Location = New System.Drawing.Point(11, 57)
+        Me.TbCntrl.Margin = New System.Windows.Forms.Padding(2)
+        Me.TbCntrl.Name = "TbCntrl"
+        Me.TbCntrl.Padding = New System.Drawing.Point(20, 10)
+        Me.TbCntrl.SelectedIndex = 0
+        Me.TbCntrl.Size = New System.Drawing.Size(755, 527)
+        Me.TbCntrl.TabIndex = 1
         '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(51, 352)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(236, 25)
-        Me.DateTimePicker3.TabIndex = 24
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(288, 25)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(154, 37)
-        Me.Label8.TabIndex = 23
-        Me.Label8.Text = "MY LOANS"
-        '
-        'ListBox3
-        '
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.ItemHeight = 17
-        Me.ListBox3.Location = New System.Drawing.Point(492, 132)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(250, 310)
-        Me.ListBox3.TabIndex = 24
-        '
-        'ListBox4
-        '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.ItemHeight = 17
-        Me.ListBox4.Location = New System.Drawing.Point(236, 132)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(250, 310)
-        Me.ListBox4.TabIndex = 25
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(310, 101)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(113, 17)
-        Me.Label9.TabIndex = 26
-        Me.Label9.Text = "CURRENT LOANS"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(581, 101)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 17)
-        Me.Label10.TabIndex = 27
-        Me.Label10.Text = "PAST LOANS"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(63, 162)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(83, 23)
-        Me.Button3.TabIndex = 28
-        Me.Button3.Text = "POPULATE"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(46, 132)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(120, 17)
-        Me.Label11.TabIndex = 29
-        Me.Label11.Text = "POPULATE LOANS"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(70, 225)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(76, 17)
-        Me.Label12.TabIndex = 31
-        Me.Label12.Text = "PRINT LIST"
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(63, 255)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(83, 23)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "PRINT"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Form1
+        'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -490,17 +490,17 @@ Partial Class Form1
         Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.TbCntrl)
-        Me.Name = "Form1"
+        Me.Name = "Menu"
         Me.Text = "Media Equipment Booking System"
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabLoan.ResumeLayout(False)
         Me.TabLoan.PerformLayout()
-        Me.TbCntrl.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TbCntrl.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
