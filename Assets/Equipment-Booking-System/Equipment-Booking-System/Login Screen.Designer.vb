@@ -27,6 +27,7 @@ Partial Class frmLogin
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.lblClose = New System.Windows.Forms.Label()
+        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'lblLoanDetails
@@ -70,9 +71,10 @@ Partial Class frmLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.Azure
         Me.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Azure
+        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnLogin.Location = New System.Drawing.Point(257, 264)
+        Me.btnLogin.Location = New System.Drawing.Point(256, 285)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(86, 31)
         Me.btnLogin.TabIndex = 26
@@ -88,8 +90,23 @@ Partial Class frmLogin
         Me.lblClose.Location = New System.Drawing.Point(366, 9)
         Me.lblClose.Name = "lblClose"
         Me.lblClose.Size = New System.Drawing.Size(27, 30)
-        Me.lblClose.TabIndex = 27
+        Me.lblClose.TabIndex = 23
         Me.lblClose.Text = "X"
+        '
+        'chkShowPassword
+        '
+        Me.chkShowPassword.AutoSize = True
+        Me.chkShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.chkShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chkShowPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkShowPassword.ForeColor = System.Drawing.Color.Azure
+        Me.chkShowPassword.Location = New System.Drawing.Point(198, 231)
+        Me.chkShowPassword.Name = "chkShowPassword"
+        Me.chkShowPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkShowPassword.Size = New System.Drawing.Size(144, 25)
+        Me.chkShowPassword.TabIndex = 28
+        Me.chkShowPassword.Text = "Show Password"
+        Me.chkShowPassword.UseVisualStyleBackColor = True
         '
         'frmLogin
         '
@@ -97,7 +114,8 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(405, 341)
+        Me.ClientSize = New System.Drawing.Size(405, 344)
+        Me.Controls.Add(Me.chkShowPassword)
         Me.Controls.Add(Me.lblClose)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
@@ -116,4 +134,5 @@ Partial Class frmLogin
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents lblClose As Label
+    Friend WithEvents chkShowPassword As CheckBox
 End Class

@@ -22,29 +22,29 @@ Public Class frmLogin
     '
 
     ''"Username" disappear when field is clicked
-    Private Sub txtUsername_MouseClick(sender As Object, e As MouseEventArgs) Handles txtUsername.MouseClick
+    Public Sub txtUsername_MouseClick(sender As Object, e As MouseEventArgs) Handles txtUsername.MouseClick
         If txtUsername.Text = "USERNAME" Then
             txtUsername.Text = ""
         End If
     End Sub
     ''"Username" reappear when field is clicked off and left blank
-    Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
+    Public Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
         If txtUsername.Text = "" Then
             txtUsername.Text = "USERNAME"
         End If
     End Sub
     ''"Password reappear in normal characters when field is blank and clicked off
-    Private Sub txtPassword_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
+    Public Sub txtPassword_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
         If txtPassword.Text = "" Then
-            txtPassword.PasswordChar = ""
+            txtPassword.UseSystemPasswordChar = False
             txtPassword.Text = "PASSWORD"
         End If
     End Sub
     ''Password disappear when user clicks and character type is set to secure password characters
-    Private Sub txtPassword_MouseClick(sender As Object, e As MouseEventArgs) Handles txtPassword.MouseClick
+    Public Sub txtPassword_MouseClick(sender As Object, e As MouseEventArgs) Handles txtPassword.MouseClick
 
         If txtPassword.Text = "PASSWORD" Then
-            txtPassword.PasswordChar = "*"
+            txtPassword.UseSystemPasswordChar = True
             txtPassword.Text = ""
         End If
     End Sub
@@ -85,31 +85,43 @@ Public Class frmLogin
             da = New SqlClient.SqlDataAdapter(sqlquery, con)
             da.Fill(ds, "UserInfo")
             If ds.Tables("UserInfo").Rows.Count <> 0 Then
-                MessageBox.Show("Login succeed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'MessageBox.Show("Login succeed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+                'Goto MainMenu
+                Me.Hide()
+                frmMainMenu.Show()
+
             Else
                 MessageBox.Show("Invalid user name and password", "Access denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
             con.Close()
 
-            'clear()    'calling clear method here
+            clear()    'calling clear method here
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Exception generated", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    '' declaring a method for clearing the controls
-    'Public Sub clear()
-    '    txtPassword.Clear()
-    '    txtUsername.Clear()
-    'End Sub
+    ' declaring a method for clearing the controls
+    Public Sub clear()
+        txtPassword.Clear()
+        txtUsername.Clear()
+    End Sub
 
     '' code for show password
-    'Private Sub chkshowpass_CheckedChanged(sender As Object, e As EventArgs) Handles chkshowpass.CheckedChanged
-    '    If chkshowpass.Checked = True Then
-    '        txtPass.UseSystemPasswordChar = False
-    '    Else
-    '        txtPass.UseSystemPasswordChar = True
-    '    End If
-    'End Sub
+    Private Sub chkshowpassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+        If chkShowPassword.Checked = True Then
+            txtPassword.UseSystemPasswordChar = False
+        Else
+            txtPassword.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    '
+    ''''''''PROBLEMS''''''''''''
+    'HIGHLIGHTING OF TEXT IN USERNAME FIELD ON STARTUP
+    'TABBING INTO PASSWORD FIELD DOESNT HAVE THE PASSWORD CHARACTERS ENABLED
+    'EVERYTHING IS BLANK WHEN YOU PUT IN INVALID CREDS AND GET SENT BACK
 End Class
