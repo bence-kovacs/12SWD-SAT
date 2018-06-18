@@ -69,6 +69,7 @@ Partial Class frmLogin
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.Azure
+        Me.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Azure
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btnLogin.Location = New System.Drawing.Point(257, 264)
