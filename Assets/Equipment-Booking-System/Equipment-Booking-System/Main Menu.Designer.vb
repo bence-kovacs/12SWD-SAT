@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Menu
+Partial Class frmMainMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -75,17 +75,19 @@ Partial Class Menu
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(144, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(216, 14)
+        Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(509, 37)
+        Me.lblTitle.Size = New System.Drawing.Size(773, 55)
         Me.lblTitle.TabIndex = 2
         Me.lblTitle.Text = "MEDIA EQUIPMENT BOOKING SYSTEM"
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(691, 23)
+        Me.btnLogOut.Location = New System.Drawing.Point(1036, 35)
+        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogOut.Size = New System.Drawing.Size(112, 35)
         Me.btnLogOut.TabIndex = 3
         Me.btnLogOut.Text = "LOG OUT"
         Me.btnLogOut.UseVisualStyleBackColor = True
@@ -101,28 +103,29 @@ Partial Class Menu
         Me.TabPage3.Controls.Add(Me.ListBox4)
         Me.TabPage3.Controls.Add(Me.ListBox3)
         Me.TabPage3.Controls.Add(Me.Label8)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 51)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Size = New System.Drawing.Size(747, 483)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(1124, 756)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "               View               "
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(70, 225)
+        Me.Label12.Location = New System.Drawing.Point(105, 346)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(76, 17)
+        Me.Label12.Size = New System.Drawing.Size(116, 28)
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "PRINT LIST"
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(63, 255)
+        Me.Button4.Location = New System.Drawing.Point(94, 392)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(83, 23)
+        Me.Button4.Size = New System.Drawing.Size(124, 35)
         Me.Button4.TabIndex = 30
         Me.Button4.Text = "PRINT"
         Me.Button4.UseVisualStyleBackColor = True
@@ -130,17 +133,19 @@ Partial Class Menu
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(46, 132)
+        Me.Label11.Location = New System.Drawing.Point(69, 203)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(120, 17)
+        Me.Label11.Size = New System.Drawing.Size(183, 28)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "POPULATE LOANS"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(63, 162)
+        Me.Button3.Location = New System.Drawing.Point(94, 249)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(83, 23)
+        Me.Button3.Size = New System.Drawing.Size(124, 35)
         Me.Button3.TabIndex = 28
         Me.Button3.Text = "POPULATE"
         Me.Button3.UseVisualStyleBackColor = True
@@ -148,46 +153,51 @@ Partial Class Menu
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(581, 101)
+        Me.Label10.Location = New System.Drawing.Point(872, 155)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 17)
+        Me.Label10.Size = New System.Drawing.Size(132, 28)
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "PAST LOANS"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(310, 101)
+        Me.Label9.Location = New System.Drawing.Point(465, 155)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(113, 17)
+        Me.Label9.Size = New System.Drawing.Size(175, 28)
         Me.Label9.TabIndex = 26
         Me.Label9.Text = "CURRENT LOANS"
         '
         'ListBox4
         '
         Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.ItemHeight = 17
-        Me.ListBox4.Location = New System.Drawing.Point(236, 132)
+        Me.ListBox4.ItemHeight = 28
+        Me.ListBox4.Location = New System.Drawing.Point(354, 203)
+        Me.ListBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(250, 310)
+        Me.ListBox4.Size = New System.Drawing.Size(373, 452)
         Me.ListBox4.TabIndex = 25
         '
         'ListBox3
         '
         Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.ItemHeight = 17
-        Me.ListBox3.Location = New System.Drawing.Point(492, 132)
+        Me.ListBox3.ItemHeight = 28
+        Me.ListBox3.Location = New System.Drawing.Point(738, 203)
+        Me.ListBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(250, 310)
+        Me.ListBox3.Size = New System.Drawing.Size(373, 452)
         Me.ListBox3.TabIndex = 24
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(288, 25)
+        Me.Label8.Location = New System.Drawing.Point(432, 38)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(154, 37)
+        Me.Label8.Size = New System.Drawing.Size(233, 55)
         Me.Label8.TabIndex = 23
         Me.Label8.Text = "MY LOANS"
         '
@@ -207,37 +217,39 @@ Partial Class Menu
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.ComboBox4)
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 51)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage2.Size = New System.Drawing.Size(747, 483)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1124, 756)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "               Reserve               "
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(102, 318)
+        Me.Label7.Location = New System.Drawing.Point(153, 489)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 17)
+        Me.Label7.Size = New System.Drawing.Size(179, 28)
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "DATE OF RETURN"
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(51, 352)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(76, 542)
+        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(236, 25)
+        Me.DateTimePicker3.Size = New System.Drawing.Size(352, 33)
         Me.DateTimePicker3.TabIndex = 24
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(340, 16)
+        Me.Label2.Location = New System.Drawing.Point(510, 25)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(372, 37)
+        Me.Label2.Size = New System.Drawing.Size(562, 55)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "EQUIPMENT INFORMATION"
         '
@@ -245,43 +257,48 @@ Partial Class Menu
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(5, 16)
+        Me.Label3.Location = New System.Drawing.Point(8, 25)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(308, 37)
+        Me.Label3.Size = New System.Drawing.Size(466, 55)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "RESERVATION DETAILS"
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 17
-        Me.ListBox2.Location = New System.Drawing.Point(370, 275)
+        Me.ListBox2.ItemHeight = 28
+        Me.ListBox2.Location = New System.Drawing.Point(555, 423)
+        Me.ListBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(300, 191)
+        Me.ListBox2.Size = New System.Drawing.Size(448, 284)
         Me.ListBox2.TabIndex = 21
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(370, 69)
+        Me.PictureBox2.Location = New System.Drawing.Point(555, 106)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(300, 200)
+        Me.PictureBox2.Size = New System.Drawing.Size(450, 308)
         Me.PictureBox2.TabIndex = 20
         Me.PictureBox2.TabStop = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(178, 402)
+        Me.Button1.Location = New System.Drawing.Point(267, 618)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 44)
+        Me.Button1.Size = New System.Drawing.Size(164, 68)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "Clear"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(51, 402)
+        Me.Button2.Location = New System.Drawing.Point(76, 618)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 44)
+        Me.Button2.Size = New System.Drawing.Size(164, 68)
         Me.Button2.TabIndex = 18
         Me.Button2.Text = "Confirm Selection"
         Me.Button2.UseVisualStyleBackColor = True
@@ -289,34 +306,38 @@ Partial Class Menu
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(105, 238)
+        Me.Label4.Location = New System.Drawing.Point(158, 366)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 17)
+        Me.Label4.Size = New System.Drawing.Size(155, 28)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "DATE OF LOAN"
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(51, 275)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(76, 423)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(236, 25)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(352, 33)
         Me.DateTimePicker2.TabIndex = 16
         '
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"Equipment 1", "Equipment 2", "Equipment 3" & Global.Microsoft.VisualBasic.ChrW(9)})
-        Me.ComboBox3.Location = New System.Drawing.Point(51, 197)
+        Me.ComboBox3.Location = New System.Drawing.Point(76, 303)
+        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(170, 25)
+        Me.ComboBox3.Size = New System.Drawing.Size(253, 36)
         Me.ComboBox3.TabIndex = 15
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(79, 166)
+        Me.Label5.Location = New System.Drawing.Point(118, 255)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(121, 17)
+        Me.Label5.Size = New System.Drawing.Size(186, 28)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "EQUIPMENT PIECE"
         '
@@ -324,17 +345,19 @@ Partial Class Menu
         '
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"Category 1", "Category 2", "Category 3"})
-        Me.ComboBox4.Location = New System.Drawing.Point(51, 104)
+        Me.ComboBox4.Location = New System.Drawing.Point(76, 160)
+        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(170, 25)
+        Me.ComboBox4.Size = New System.Drawing.Size(253, 36)
         Me.ComboBox4.TabIndex = 13
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(65, 75)
+        Me.Label6.Location = New System.Drawing.Point(98, 115)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 17)
+        Me.Label6.Size = New System.Drawing.Size(236, 28)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "EQUIPMENT CATEGORY"
         '
@@ -353,11 +376,10 @@ Partial Class Menu
         Me.TabLoan.Controls.Add(Me.lblEquipment)
         Me.TabLoan.Controls.Add(Me.ComboBox1)
         Me.TabLoan.Controls.Add(Me.lblEquipmentCategory)
-        Me.TabLoan.Location = New System.Drawing.Point(4, 40)
-        Me.TabLoan.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabLoan.Location = New System.Drawing.Point(4, 51)
         Me.TabLoan.Name = "TabLoan"
-        Me.TabLoan.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabLoan.Size = New System.Drawing.Size(747, 483)
+        Me.TabLoan.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabLoan.Size = New System.Drawing.Size(1124, 756)
         Me.TabLoan.TabIndex = 0
         Me.TabLoan.Text = "               Loan               "
         '
@@ -365,9 +387,10 @@ Partial Class Menu
         '
         Me.lblLoanEquipmentInfo.AutoSize = True
         Me.lblLoanEquipmentInfo.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLoanEquipmentInfo.Location = New System.Drawing.Point(340, 16)
+        Me.lblLoanEquipmentInfo.Location = New System.Drawing.Point(510, 25)
+        Me.lblLoanEquipmentInfo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoanEquipmentInfo.Name = "lblLoanEquipmentInfo"
-        Me.lblLoanEquipmentInfo.Size = New System.Drawing.Size(372, 37)
+        Me.lblLoanEquipmentInfo.Size = New System.Drawing.Size(562, 55)
         Me.lblLoanEquipmentInfo.TabIndex = 23
         Me.lblLoanEquipmentInfo.Text = "EQUIPMENT INFORMATION"
         '
@@ -375,43 +398,48 @@ Partial Class Menu
         '
         Me.lblLoanDetails.AutoSize = True
         Me.lblLoanDetails.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLoanDetails.Location = New System.Drawing.Point(34, 16)
+        Me.lblLoanDetails.Location = New System.Drawing.Point(51, 25)
+        Me.lblLoanDetails.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoanDetails.Name = "lblLoanDetails"
-        Me.lblLoanDetails.Size = New System.Drawing.Size(202, 37)
+        Me.lblLoanDetails.Size = New System.Drawing.Size(305, 55)
         Me.lblLoanDetails.TabIndex = 22
         Me.lblLoanDetails.Text = "LOAN DETAILS"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 17
-        Me.ListBox1.Location = New System.Drawing.Point(370, 275)
+        Me.ListBox1.ItemHeight = 28
+        Me.ListBox1.Location = New System.Drawing.Point(555, 423)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(300, 191)
+        Me.ListBox1.Size = New System.Drawing.Size(448, 284)
         Me.ListBox1.TabIndex = 21
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(370, 69)
+        Me.PictureBox1.Location = New System.Drawing.Point(555, 106)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(300, 200)
+        Me.PictureBox1.Size = New System.Drawing.Size(450, 308)
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
         'btnClearLoan
         '
-        Me.btnClearLoan.Location = New System.Drawing.Point(178, 402)
+        Me.btnClearLoan.Location = New System.Drawing.Point(267, 618)
+        Me.btnClearLoan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnClearLoan.Name = "btnClearLoan"
-        Me.btnClearLoan.Size = New System.Drawing.Size(109, 44)
+        Me.btnClearLoan.Size = New System.Drawing.Size(164, 68)
         Me.btnClearLoan.TabIndex = 19
         Me.btnClearLoan.Text = "Clear"
         Me.btnClearLoan.UseVisualStyleBackColor = True
         '
         'btnConfirmLoan
         '
-        Me.btnConfirmLoan.Location = New System.Drawing.Point(51, 402)
+        Me.btnConfirmLoan.Location = New System.Drawing.Point(76, 618)
+        Me.btnConfirmLoan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnConfirmLoan.Name = "btnConfirmLoan"
-        Me.btnConfirmLoan.Size = New System.Drawing.Size(109, 44)
+        Me.btnConfirmLoan.Size = New System.Drawing.Size(164, 68)
         Me.btnConfirmLoan.TabIndex = 18
         Me.btnConfirmLoan.Text = "Confirm Selection"
         Me.btnConfirmLoan.UseVisualStyleBackColor = True
@@ -419,34 +447,38 @@ Partial Class Menu
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(105, 275)
+        Me.Label1.Location = New System.Drawing.Point(158, 423)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 17)
+        Me.Label1.Size = New System.Drawing.Size(179, 28)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "DATE OF RETURN"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(51, 308)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(76, 474)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(236, 25)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(352, 33)
         Me.DateTimePicker1.TabIndex = 16
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Equipment 1", "Equipment 2", "Equipment 3" & Global.Microsoft.VisualBasic.ChrW(9)})
-        Me.ComboBox2.Location = New System.Drawing.Point(51, 197)
+        Me.ComboBox2.Location = New System.Drawing.Point(76, 303)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(170, 25)
+        Me.ComboBox2.Size = New System.Drawing.Size(253, 36)
         Me.ComboBox2.TabIndex = 15
         '
         'lblEquipment
         '
         Me.lblEquipment.AutoSize = True
-        Me.lblEquipment.Location = New System.Drawing.Point(79, 166)
+        Me.lblEquipment.Location = New System.Drawing.Point(118, 255)
+        Me.lblEquipment.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEquipment.Name = "lblEquipment"
-        Me.lblEquipment.Size = New System.Drawing.Size(121, 17)
+        Me.lblEquipment.Size = New System.Drawing.Size(186, 28)
         Me.lblEquipment.TabIndex = 14
         Me.lblEquipment.Text = "EQUIPMENT PIECE"
         '
@@ -454,17 +486,19 @@ Partial Class Menu
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Category 1", "Category 2", "Category 3"})
-        Me.ComboBox1.Location = New System.Drawing.Point(51, 104)
+        Me.ComboBox1.Location = New System.Drawing.Point(76, 160)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(170, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(253, 36)
         Me.ComboBox1.TabIndex = 13
         '
         'lblEquipmentCategory
         '
         Me.lblEquipmentCategory.AutoSize = True
-        Me.lblEquipmentCategory.Location = New System.Drawing.Point(65, 75)
+        Me.lblEquipmentCategory.Location = New System.Drawing.Point(98, 115)
+        Me.lblEquipmentCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEquipmentCategory.Name = "lblEquipmentCategory"
-        Me.lblEquipmentCategory.Size = New System.Drawing.Size(153, 17)
+        Me.lblEquipmentCategory.Size = New System.Drawing.Size(236, 28)
         Me.lblEquipmentCategory.TabIndex = 12
         Me.lblEquipmentCategory.Text = "EQUIPMENT CATEGORY"
         '
@@ -474,23 +508,23 @@ Partial Class Menu
         Me.TbCntrl.Controls.Add(Me.TabPage2)
         Me.TbCntrl.Controls.Add(Me.TabPage3)
         Me.TbCntrl.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbCntrl.Location = New System.Drawing.Point(11, 57)
-        Me.TbCntrl.Margin = New System.Windows.Forms.Padding(2)
+        Me.TbCntrl.Location = New System.Drawing.Point(16, 88)
         Me.TbCntrl.Name = "TbCntrl"
         Me.TbCntrl.Padding = New System.Drawing.Point(20, 10)
         Me.TbCntrl.SelectedIndex = 0
-        Me.TbCntrl.Size = New System.Drawing.Size(755, 527)
+        Me.TbCntrl.Size = New System.Drawing.Size(1132, 811)
         Me.TbCntrl.TabIndex = 1
         '
-        'Menu
+        'frmMainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 595)
+        Me.ClientSize = New System.Drawing.Size(1166, 915)
         Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.TbCntrl)
-        Me.Name = "Menu"
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Name = "frmMainMenu"
         Me.Text = "Media Equipment Booking System"
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
