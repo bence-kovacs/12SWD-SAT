@@ -23,6 +23,7 @@ Partial Class frmMainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -62,14 +63,22 @@ Partial Class frmMainMenu
         Me.CmboBxLoanEquipment = New System.Windows.Forms.ComboBox()
         Me.lblEquipment = New System.Windows.Forms.Label()
         Me.CmboBxLoanCategory = New System.Windows.Forms.ComboBox()
+        Me.EquipmentCategoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EquipmentInventoryDataSet = New Equipment_Booking_System.EquipmentInventoryDataSet()
         Me.lblEquipmentCategory = New System.Windows.Forms.Label()
         Me.TbCntrl = New System.Windows.Forms.TabControl()
+        Me.EquipmentCategoryTableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentCategoryTableAdapter()
+        Me.EquipmentAudioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EquipmentAudio__TableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentAudio__TableAdapter()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabLoan.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EquipmentCategoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EquipmentInventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbCntrl.SuspendLayout()
+        CType(Me.EquipmentAudioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -435,8 +444,8 @@ Partial Class frmMainMenu
         '
         'CmboBxLoanEquipment
         '
+        Me.CmboBxLoanEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmboBxLoanEquipment.FormattingEnabled = True
-        Me.CmboBxLoanEquipment.Items.AddRange(New Object() {"Equipment 1", "Equipment 2", "Equipment 3" & Global.Microsoft.VisualBasic.ChrW(9)})
         Me.CmboBxLoanEquipment.Location = New System.Drawing.Point(51, 197)
         Me.CmboBxLoanEquipment.Name = "CmboBxLoanEquipment"
         Me.CmboBxLoanEquipment.Size = New System.Drawing.Size(170, 25)
@@ -453,12 +462,25 @@ Partial Class frmMainMenu
         '
         'CmboBxLoanCategory
         '
+        Me.CmboBxLoanCategory.DataSource = Me.EquipmentCategoryBindingSource
+        Me.CmboBxLoanCategory.DisplayMember = "Category"
+        Me.CmboBxLoanCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmboBxLoanCategory.FormattingEnabled = True
-        Me.CmboBxLoanCategory.Items.AddRange(New Object() {"Category 1", "Category 2", "Category 3"})
         Me.CmboBxLoanCategory.Location = New System.Drawing.Point(51, 104)
         Me.CmboBxLoanCategory.Name = "CmboBxLoanCategory"
         Me.CmboBxLoanCategory.Size = New System.Drawing.Size(170, 25)
         Me.CmboBxLoanCategory.TabIndex = 13
+        Me.CmboBxLoanCategory.ValueMember = "Category"
+        '
+        'EquipmentCategoryBindingSource
+        '
+        Me.EquipmentCategoryBindingSource.DataMember = "EquipmentCategory"
+        Me.EquipmentCategoryBindingSource.DataSource = Me.EquipmentInventoryDataSet
+        '
+        'EquipmentInventoryDataSet
+        '
+        Me.EquipmentInventoryDataSet.DataSetName = "EquipmentInventoryDataSet"
+        Me.EquipmentInventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblEquipmentCategory
         '
@@ -483,6 +505,19 @@ Partial Class frmMainMenu
         Me.TbCntrl.Size = New System.Drawing.Size(783, 527)
         Me.TbCntrl.TabIndex = 1
         '
+        'EquipmentCategoryTableAdapter
+        '
+        Me.EquipmentCategoryTableAdapter.ClearBeforeFill = True
+        '
+        'EquipmentAudioBindingSource
+        '
+        Me.EquipmentAudioBindingSource.DataMember = "EquipmentAudio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.EquipmentAudioBindingSource.DataSource = Me.EquipmentInventoryDataSet
+        '
+        'EquipmentAudio__TableAdapter
+        '
+        Me.EquipmentAudio__TableAdapter.ClearBeforeFill = True
+        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -501,7 +536,10 @@ Partial Class frmMainMenu
         Me.TabLoan.ResumeLayout(False)
         Me.TabLoan.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EquipmentCategoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EquipmentInventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbCntrl.ResumeLayout(False)
+        CType(Me.EquipmentAudioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -547,4 +585,9 @@ Partial Class frmMainMenu
     Friend WithEvents Button4 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents EquipmentInventoryDataSet As EquipmentInventoryDataSet
+    Friend WithEvents EquipmentCategoryBindingSource As BindingSource
+    Friend WithEvents EquipmentCategoryTableAdapter As EquipmentInventoryDataSetTableAdapters.EquipmentCategoryTableAdapter
+    Friend WithEvents EquipmentAudioBindingSource As BindingSource
+    Friend WithEvents EquipmentAudio__TableAdapter As EquipmentInventoryDataSetTableAdapters.EquipmentAudio__TableAdapter
 End Class
