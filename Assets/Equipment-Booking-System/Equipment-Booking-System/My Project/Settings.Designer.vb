@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("UsersConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\EquipmentInve"& _ 
+            "ntory.mdf;Integrated Security=True")>  _
+        Public ReadOnly Property EquipmentInventoryConnectionString() As String
+            Get
+                Return CType(Me("EquipmentInventoryConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
