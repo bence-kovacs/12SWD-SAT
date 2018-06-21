@@ -1,90 +1,35 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data
+Imports System.Data.SqlClient
 Public Class frmMainMenu
 
+    'Set out equipment data as a new dataset
+    Private EquipmentData As DataSet
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'EquipmentInventoryDataSet.EquipmentVideo' table. You can move, or remove it, as needed.
-        Me.EquipmentVideoTableAdapter.Fill(Me.EquipmentInventoryDataSet.EquipmentVideo)
-        'TODO: This line of code loads data into the 'EquipmentInventoryDataSet._EquipmentAudio__' table. You can move, or remove it, as needed.
-        Me.EquipmentAudio__TableAdapter.Fill(Me.EquipmentInventoryDataSet._EquipmentAudio__)
 
-        '/////////////////////////////LOAN TAB////////////////////////////////////////////////
+        'Load data
+        EquipmentData = EquipmentInventory.CreateDataSet()
 
-        'Populate 'Category box' under 'loan' tab with SQL Query
-        'Try
-        '    Me.EquipmentCategoryTableAdapter.FillCategories(Me.EquipmentInventoryDataSet.EquipmentCategory)
-        'Catch ex As System.Exception
-        '    System.Windows.Forms.MessageBox.Show(ex.Message)
-        'End Try
+        'Bind the loan category combo box with its relevant values
+        With CmboBxLoanCategory
+            .DisplayMember = "Description"
+            .ValueMember = "ID"
+            .DataSource = EquipmentData.Tables("Categories")
+        End With
     End Sub
 
     Private Sub CmboBxLoanCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmboBxLoanCategory.SelectedIndexChanged
 
-        If CmboBxLoanEquipment.SelectedIndex = 0 Then
-            Try
-                Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
-            Catch ex As System.Exception
-                System.Windows.Forms.MessageBox.Show(ex.Message)
-            End Try
-        ElseIf CmboBxLoanEquipment.SelectedIndex = 1 Then
-            Try
-                Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
-            Catch ex As System.Exception
-                System.Windows.Forms.MessageBox.Show(ex.Message)
-            End Try
-        End If
+        'Determine the relevent table as a viewable table
+        Dim dtvEquipment As DataView = EquipmentData.Tables("Equipment").DefaultView
+        dtvEquipment.RowFilter = "IDParent =" + CmboBxLoanCategory.SelectedValue.ToString
 
-        'CmboBxLoanEquipment.Items.Add("video1")
-
-
-
-        '''''TRY 2''''''
-
-
-        '    Dim SelectedCategory As String
-        '    SelectedCategory = CmboBxLoanCategory.Text
-
-        '    If SelectedCategory = "Audio" Then
-        '        Try
-        '            Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
-        '        Catch ex As System.Exception
-        '            System.Windows.Forms.MessageBox.Show(ex.Message)
-        '        End Try
-        '    ElseIf SelectedCategory = "Video" Then
-        '        Try
-        '            Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
-        '        Catch ex As System.Exception
-        '            System.Windows.Forms.MessageBox.Show(ex.Message)
-        '        End Try
-        '    End If
-
-        ''''''''''TRY 3'''''''''
-        '''
-
-        'Select Case CmboBxLoanCategory.SelectedIndex
-        '    Case "0"
-        '        'Try
-        '        Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
-        '        'Catch ex As System.Exception
-        '        '    System.Windows.Forms.MessageBox.Show(ex.Message)
-        '        'End Try
-        '    Case "1"
-        '        'Try
-        '        Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
-        '        'Catch ex As System.Exception
-        '        '    System.Windows.Forms.MessageBox.Show(ex.Message)
-        '        'End Try
-        'End Select
-
-        ''''''''''''''''''''''TRY 4'''''''''''''''''''''''''''''
-
-
-        'Select Case CmboBxLoanCategory.SelectedIndex
-        '    Case "0"
-        '        Me.CmboBxLoanEquipment. = Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
-        '    Case "1"
-        '        Me.CmboBxLoanEquipment.Items = Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
-        'End Select
+        'Bind the equipment selection category with its relevent values from the table
+        With CmboBxLoanEquipment
+            .DisplayMember = "Description"
+            .ValueMember = "ID"
+            .DataSource = dtvEquipment
+        End With
     End Sub
 
 End Class
