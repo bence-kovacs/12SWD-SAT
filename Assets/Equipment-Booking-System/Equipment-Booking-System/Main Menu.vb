@@ -20,19 +20,22 @@ Public Class frmMainMenu
 
     Private Sub CmboBxLoanCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmboBxLoanCategory.SelectedIndexChanged
 
-        'If CmboBxLoanEquipment.Text = "Audio" Then
-        '    Try
-        '        Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
-        '    Catch ex As System.Exception
-        '        System.Windows.Forms.MessageBox.Show(ex.Message)
-        '    End Try
-        'ElseIf CmboBxLoanEquipment.Text = "Video" Then
-        '    Try
-        '        Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
-        '    Catch ex As System.Exception
-        '        System.Windows.Forms.MessageBox.Show(ex.Message)
-        '    End Try
-        'End If
+        If CmboBxLoanEquipment.SelectedIndex = 0 Then
+            Try
+                Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+        ElseIf CmboBxLoanEquipment.SelectedIndex = 1 Then
+            Try
+                Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+        End If
+
+        'CmboBxLoanEquipment.Items.Add("video1")
+
 
 
         '''''TRY 2''''''
@@ -73,12 +76,15 @@ Public Class frmMainMenu
         '        'End Try
         'End Select
 
-        Select Case CmboBxLoanCategory.SelectedIndex
-            Case "0"
-                Me.CmboBxLoanEquipment. = Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
-            Case "1"
-                Me.CmboBxLoanEquipment.Items = Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
-        End Select
+        ''''''''''''''''''''''TRY 4'''''''''''''''''''''''''''''
+
+
+        'Select Case CmboBxLoanCategory.SelectedIndex
+        '    Case "0"
+        '        Me.CmboBxLoanEquipment. = Me.EquipmentAudio__TableAdapter.FillAudio(Me.EquipmentInventoryDataSet._EquipmentAudio__)
+        '    Case "1"
+        '        Me.CmboBxLoanEquipment.Items = Me.EquipmentVideoTableAdapter.FillVideoEquipment(Me.EquipmentInventoryDataSet.EquipmentVideo)
+        'End Select
     End Sub
 
 End Class

@@ -61,17 +61,19 @@ Partial Class frmMainMenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.CmboBxLoanEquipment = New System.Windows.Forms.ComboBox()
-        Me.EquipmentVideoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EquipmentInventoryDataSet = New Equipment_Booking_System.EquipmentInventoryDataSet()
         Me.lblEquipment = New System.Windows.Forms.Label()
         Me.CmboBxLoanCategory = New System.Windows.Forms.ComboBox()
-        Me.EquipmentCategoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblEquipmentCategory = New System.Windows.Forms.Label()
+        Me.EquipmentVideoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EquipmentInventoryDataSet = New Equipment_Booking_System.EquipmentInventoryDataSet()
+        Me.EquipmentCategoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TbCntrl = New System.Windows.Forms.TabControl()
         Me.EquipmentAudioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EquipmentCategoryTableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentCategoryTableAdapter()
         Me.EquipmentAudio__TableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentAudio__TableAdapter()
         Me.EquipmentVideoTableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentVideoTableAdapter()
+        Me.EquipmentInventoryDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EquipmentAudioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,6 +84,8 @@ Partial Class frmMainMenu
         CType(Me.EquipmentCategoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbCntrl.SuspendLayout()
         CType(Me.EquipmentAudioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EquipmentInventoryDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EquipmentAudioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -447,22 +451,13 @@ Partial Class frmMainMenu
         '
         'CmboBxLoanEquipment
         '
+        Me.CmboBxLoanEquipment.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.EquipmentAudioBindingSource, "Equipment", True))
         Me.CmboBxLoanEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmboBxLoanEquipment.FormattingEnabled = True
         Me.CmboBxLoanEquipment.Location = New System.Drawing.Point(51, 197)
         Me.CmboBxLoanEquipment.Name = "CmboBxLoanEquipment"
         Me.CmboBxLoanEquipment.Size = New System.Drawing.Size(170, 25)
         Me.CmboBxLoanEquipment.TabIndex = 15
-        '
-        'EquipmentVideoBindingSource
-        '
-        Me.EquipmentVideoBindingSource.DataMember = "EquipmentVideo"
-        Me.EquipmentVideoBindingSource.DataSource = Me.EquipmentInventoryDataSet
-        '
-        'EquipmentInventoryDataSet
-        '
-        Me.EquipmentInventoryDataSet.DataSetName = "EquipmentInventoryDataSet"
-        Me.EquipmentInventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblEquipment
         '
@@ -477,16 +472,11 @@ Partial Class frmMainMenu
         '
         Me.CmboBxLoanCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmboBxLoanCategory.FormattingEnabled = True
-        Me.CmboBxLoanCategory.Items.AddRange(New Object() {"Audio", "Video"})
+        Me.CmboBxLoanCategory.Items.AddRange(New Object() {"Video", "Audio"})
         Me.CmboBxLoanCategory.Location = New System.Drawing.Point(51, 104)
         Me.CmboBxLoanCategory.Name = "CmboBxLoanCategory"
         Me.CmboBxLoanCategory.Size = New System.Drawing.Size(170, 25)
         Me.CmboBxLoanCategory.TabIndex = 13
-        '
-        'EquipmentCategoryBindingSource
-        '
-        Me.EquipmentCategoryBindingSource.DataMember = "EquipmentCategory"
-        Me.EquipmentCategoryBindingSource.DataSource = Me.EquipmentInventoryDataSet
         '
         'lblEquipmentCategory
         '
@@ -496,6 +486,21 @@ Partial Class frmMainMenu
         Me.lblEquipmentCategory.Size = New System.Drawing.Size(153, 17)
         Me.lblEquipmentCategory.TabIndex = 12
         Me.lblEquipmentCategory.Text = "EQUIPMENT CATEGORY"
+        '
+        'EquipmentVideoBindingSource
+        '
+        Me.EquipmentVideoBindingSource.DataMember = "EquipmentVideo"
+        Me.EquipmentVideoBindingSource.DataSource = Me.EquipmentInventoryDataSet
+        '
+        'EquipmentInventoryDataSet
+        '
+        Me.EquipmentInventoryDataSet.DataSetName = "EquipmentInventoryDataSet"
+        Me.EquipmentInventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EquipmentCategoryBindingSource
+        '
+        Me.EquipmentCategoryBindingSource.DataMember = "EquipmentCategory"
+        Me.EquipmentCategoryBindingSource.DataSource = Me.EquipmentInventoryDataSet
         '
         'TbCntrl
         '
@@ -528,6 +533,16 @@ Partial Class frmMainMenu
         '
         Me.EquipmentVideoTableAdapter.ClearBeforeFill = True
         '
+        'EquipmentInventoryDataSetBindingSource
+        '
+        Me.EquipmentInventoryDataSetBindingSource.DataSource = Me.EquipmentInventoryDataSet
+        Me.EquipmentInventoryDataSetBindingSource.Position = 0
+        '
+        'EquipmentAudioBindingSource1
+        '
+        Me.EquipmentAudioBindingSource1.DataMember = "EquipmentAudio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.EquipmentAudioBindingSource1.DataSource = Me.EquipmentInventoryDataSetBindingSource
+        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -551,6 +566,8 @@ Partial Class frmMainMenu
         CType(Me.EquipmentCategoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbCntrl.ResumeLayout(False)
         CType(Me.EquipmentAudioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EquipmentInventoryDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EquipmentAudioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -603,4 +620,6 @@ Partial Class frmMainMenu
     Friend WithEvents EquipmentAudio__TableAdapter As EquipmentInventoryDataSetTableAdapters.EquipmentAudio__TableAdapter
     Friend WithEvents EquipmentVideoBindingSource As BindingSource
     Friend WithEvents EquipmentVideoTableAdapter As EquipmentInventoryDataSetTableAdapters.EquipmentVideoTableAdapter
+    Friend WithEvents EquipmentInventoryDataSetBindingSource As BindingSource
+    Friend WithEvents EquipmentAudioBindingSource1 As BindingSource
 End Class
