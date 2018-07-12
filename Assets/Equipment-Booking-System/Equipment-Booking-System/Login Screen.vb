@@ -119,6 +119,10 @@ Public Class frmLogin
         End If
     End Sub
 
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+
+    End Sub
+
     '
     ''''''''PROBLEMS''''''''''''
     'HIGHLIGHTING OF TEXT IN USERNAME FIELD ON STARTUP

@@ -32,4 +32,15 @@ Public Class frmMainMenu
         End With
     End Sub
 
+    Private Sub LstDescription_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstDescription.SelectedIndexChanged
+
+        Dim dtvdescription As DataView = EquipmentData.Tables("Description").DefaultView
+        dtvdescription.RowFilter = "IDSelection =" + LstDescription.SelectedValue.ToString
+
+        With LstDescription
+            .DisplayMember = "Description"
+            .ValueMember = "ID"
+            .DataSource = dtvdescription
+        End With
+    End Sub
 End Class

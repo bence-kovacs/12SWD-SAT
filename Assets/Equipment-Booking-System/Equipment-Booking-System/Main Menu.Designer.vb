@@ -54,7 +54,7 @@ Partial Class frmMainMenu
         Me.TabLoan = New System.Windows.Forms.TabPage()
         Me.lblLoanEquipmentInfo = New System.Windows.Forms.Label()
         Me.lblLoanDetails = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.LstDescription = New System.Windows.Forms.ListBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnClearLoan = New System.Windows.Forms.Button()
         Me.btnConfirmLoan = New System.Windows.Forms.Button()
@@ -360,7 +360,7 @@ Partial Class frmMainMenu
         Me.TabLoan.BackColor = System.Drawing.Color.Transparent
         Me.TabLoan.Controls.Add(Me.lblLoanEquipmentInfo)
         Me.TabLoan.Controls.Add(Me.lblLoanDetails)
-        Me.TabLoan.Controls.Add(Me.ListBox1)
+        Me.TabLoan.Controls.Add(Me.LstDescription)
         Me.TabLoan.Controls.Add(Me.PictureBox1)
         Me.TabLoan.Controls.Add(Me.btnClearLoan)
         Me.TabLoan.Controls.Add(Me.btnConfirmLoan)
@@ -398,14 +398,14 @@ Partial Class frmMainMenu
         Me.lblLoanDetails.TabIndex = 22
         Me.lblLoanDetails.Text = "LOAN DETAILS"
         '
-        'ListBox1
+        'LstDescription
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 17
-        Me.ListBox1.Location = New System.Drawing.Point(370, 275)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(300, 174)
-        Me.ListBox1.TabIndex = 21
+        Me.LstDescription.FormattingEnabled = True
+        Me.LstDescription.ItemHeight = 17
+        Me.LstDescription.Location = New System.Drawing.Point(370, 275)
+        Me.LstDescription.Name = "LstDescription"
+        Me.LstDescription.Size = New System.Drawing.Size(300, 174)
+        Me.LstDescription.TabIndex = 21
         '
         'PictureBox1
         '
@@ -591,7 +591,7 @@ Partial Class frmMainMenu
     Private WithEvents TabLoan As TabPage
     Friend WithEvents lblLoanEquipmentInfo As Label
     Friend WithEvents lblLoanDetails As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents LstDescription As ListBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnClearLoan As Button
     Friend WithEvents btnConfirmLoan As Button
