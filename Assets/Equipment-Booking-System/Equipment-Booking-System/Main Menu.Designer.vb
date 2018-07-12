@@ -47,9 +47,7 @@ Partial Class frmMainMenu
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabLoan = New System.Windows.Forms.TabPage()
         Me.lblLoanEquipmentInfo = New System.Windows.Forms.Label()
@@ -74,6 +72,8 @@ Partial Class frmMainMenu
         Me.EquipmentVideoTableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentVideoTableAdapter()
         Me.EquipmentInventoryDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EquipmentAudioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CmboBxReserveCategory = New System.Windows.Forms.ComboBox()
+        Me.CmboBxReserveEquipment = New System.Windows.Forms.ComboBox()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,6 +210,8 @@ Partial Class frmMainMenu
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.CmboBxReserveEquipment)
+        Me.TabPage2.Controls.Add(Me.CmboBxReserveCategory)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.DateTimePicker3)
         Me.TabPage2.Controls.Add(Me.Label2)
@@ -220,9 +222,7 @@ Partial Class frmMainMenu
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.DateTimePicker2)
-        Me.TabPage2.Controls.Add(Me.ComboBox3)
         Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Controls.Add(Me.ComboBox4)
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Location = New System.Drawing.Point(4, 40)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
@@ -319,15 +319,6 @@ Partial Class frmMainMenu
         Me.DateTimePicker2.Size = New System.Drawing.Size(236, 25)
         Me.DateTimePicker2.TabIndex = 16
         '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Equipment 1", "Equipment 2", "Equipment 3" & Global.Microsoft.VisualBasic.ChrW(9)})
-        Me.ComboBox3.Location = New System.Drawing.Point(51, 197)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(170, 25)
-        Me.ComboBox3.TabIndex = 15
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -336,15 +327,6 @@ Partial Class frmMainMenu
         Me.Label5.Size = New System.Drawing.Size(121, 17)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "EQUIPMENT PIECE"
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Category 1", "Category 2", "Category 3"})
-        Me.ComboBox4.Location = New System.Drawing.Point(51, 104)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(170, 25)
-        Me.ComboBox4.TabIndex = 13
         '
         'Label6
         '
@@ -543,6 +525,26 @@ Partial Class frmMainMenu
         Me.EquipmentAudioBindingSource1.DataMember = "EquipmentAudio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.EquipmentAudioBindingSource1.DataSource = Me.EquipmentInventoryDataSetBindingSource
         '
+        'CmboBxReserveCategory
+        '
+        Me.CmboBxReserveCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmboBxReserveCategory.FormattingEnabled = True
+        Me.CmboBxReserveCategory.Items.AddRange(New Object() {"Video", "Audio"})
+        Me.CmboBxReserveCategory.Location = New System.Drawing.Point(51, 110)
+        Me.CmboBxReserveCategory.Name = "CmboBxReserveCategory"
+        Me.CmboBxReserveCategory.Size = New System.Drawing.Size(170, 25)
+        Me.CmboBxReserveCategory.TabIndex = 26
+        '
+        'CmboBxReserveEquipment
+        '
+        Me.CmboBxReserveEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmboBxReserveEquipment.FormattingEnabled = True
+        Me.CmboBxReserveEquipment.Items.AddRange(New Object() {"Video", "Audio"})
+        Me.CmboBxReserveEquipment.Location = New System.Drawing.Point(51, 199)
+        Me.CmboBxReserveEquipment.Name = "CmboBxReserveEquipment"
+        Me.CmboBxReserveEquipment.Size = New System.Drawing.Size(170, 25)
+        Me.CmboBxReserveEquipment.TabIndex = 27
+        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -584,9 +586,7 @@ Partial Class frmMainMenu
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents Label6 As Label
     Private WithEvents TabLoan As TabPage
     Friend WithEvents lblLoanEquipmentInfo As Label
@@ -622,4 +622,6 @@ Partial Class frmMainMenu
     Friend WithEvents EquipmentVideoTableAdapter As EquipmentInventoryDataSetTableAdapters.EquipmentVideoTableAdapter
     Friend WithEvents EquipmentInventoryDataSetBindingSource As BindingSource
     Friend WithEvents EquipmentAudioBindingSource1 As BindingSource
+    Friend WithEvents CmboBxReserveCategory As ComboBox
+    Friend WithEvents CmboBxReserveEquipment As ComboBox
 End Class
