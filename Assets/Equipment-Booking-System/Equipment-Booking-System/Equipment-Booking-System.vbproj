@@ -93,6 +93,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EquipmentInventoryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LoanRecordsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoanRecordsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Main Menu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +158,17 @@
     <None Include="EquipmentInventoryDataSet.xss">
       <DependentUpon>EquipmentInventoryDataSet.xsd</DependentUpon>
     </None>
+    <None Include="LoanRecordsDataSet.xsc">
+      <DependentUpon>LoanRecordsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LoanRecordsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoanRecordsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LoanRecordsDataSet.xss">
+      <DependentUpon>LoanRecordsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -182,6 +198,9 @@
     <Content Include="EquipmentInventory_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>EquipmentInventory.mdf</DependentUpon>
+    </Content>
+    <Content Include="LoanRecords.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Users.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

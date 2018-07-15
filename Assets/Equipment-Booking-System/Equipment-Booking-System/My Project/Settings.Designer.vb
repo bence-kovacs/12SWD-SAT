@@ -75,6 +75,16 @@ Namespace My
                 Return CType(Me("EquipmentInventoryConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LoanRecords.accdb")>  _
+        Public ReadOnly Property LoanRecordsConnectionString() As String
+            Get
+                Return CType(Me("LoanRecordsConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
