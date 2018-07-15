@@ -27,14 +27,6 @@ Partial Class frmMainMenu
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -75,6 +67,11 @@ Partial Class frmMainMenu
         Me.EquipmentVideoTableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentVideoTableAdapter()
         Me.EquipmentInventoryDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EquipmentAudioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LoanRecordsDataSet = New Equipment_Booking_System.LoanRecordsDataSet()
+        Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
+        Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +84,8 @@ Partial Class frmMainMenu
         Me.TbCntrl.SuspendLayout()
         CType(Me.EquipmentInventoryDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EquipmentAudioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LoanRecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -110,14 +109,7 @@ Partial Class frmMainMenu
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Label12)
-        Me.TabPage3.Controls.Add(Me.Button4)
-        Me.TabPage3.Controls.Add(Me.Label11)
-        Me.TabPage3.Controls.Add(Me.Button3)
-        Me.TabPage3.Controls.Add(Me.Label10)
-        Me.TabPage3.Controls.Add(Me.Label9)
-        Me.TabPage3.Controls.Add(Me.ListBox4)
-        Me.TabPage3.Controls.Add(Me.ListBox3)
+        Me.TabPage3.Controls.Add(Me.Button2)
         Me.TabPage3.Controls.Add(Me.Label8)
         Me.TabPage3.Location = New System.Drawing.Point(4, 40)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
@@ -126,78 +118,6 @@ Partial Class frmMainMenu
         Me.TabPage3.Size = New System.Drawing.Size(775, 483)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "                       View                       "
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(70, 225)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(76, 17)
-        Me.Label12.TabIndex = 31
-        Me.Label12.Text = "PRINT LIST"
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(63, 255)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(83, 23)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "PRINT"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(46, 132)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(120, 17)
-        Me.Label11.TabIndex = 29
-        Me.Label11.Text = "POPULATE LOANS"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(63, 162)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(83, 23)
-        Me.Button3.TabIndex = 28
-        Me.Button3.Text = "POPULATE"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(581, 101)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 17)
-        Me.Label10.TabIndex = 27
-        Me.Label10.Text = "PAST LOANS"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(310, 101)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(113, 17)
-        Me.Label9.TabIndex = 26
-        Me.Label9.Text = "CURRENT LOANS"
-        '
-        'ListBox4
-        '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.ItemHeight = 17
-        Me.ListBox4.Location = New System.Drawing.Point(236, 132)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(250, 293)
-        Me.ListBox4.TabIndex = 25
-        '
-        'ListBox3
-        '
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.ItemHeight = 17
-        Me.ListBox3.Location = New System.Drawing.Point(492, 132)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(250, 293)
-        Me.ListBox3.TabIndex = 24
         '
         'Label8
         '
@@ -554,6 +474,35 @@ Partial Class frmMainMenu
         Me.EquipmentAudioBindingSource1.DataMember = "EquipmentAudio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.EquipmentAudioBindingSource1.DataSource = Me.EquipmentInventoryDataSetBindingSource
         '
+        'LoanRecordsDataSet
+        '
+        Me.LoanRecordsDataSet.DataSetName = "LoanRecordsDataSet"
+        Me.LoanRecordsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'LoanRecordsBindingSource
+        '
+        Me.LoanRecordsBindingSource.DataMember = "LoanRecords"
+        Me.LoanRecordsBindingSource.DataSource = Me.LoanRecordsDataSet
+        '
+        'LoanRecordsTableAdapter
+        '
+        Me.LoanRecordsTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
+        Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(328, 204)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 50)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "View Records"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -579,6 +528,8 @@ Partial Class frmMainMenu
         Me.TbCntrl.ResumeLayout(False)
         CType(Me.EquipmentInventoryDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EquipmentAudioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LoanRecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -611,17 +562,9 @@ Partial Class frmMainMenu
     Friend WithEvents CmboBxLoanCategory As ComboBox
     Friend WithEvents lblEquipmentCategory As Label
     Friend WithEvents TbCntrl As TabControl
-    Friend WithEvents ListBox4 As ListBox
-    Friend WithEvents ListBox3 As ListBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents DteTmeReserveReturn As DateTimePicker
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Button3 As Button
     Friend WithEvents EquipmentInventoryDataSet As EquipmentInventoryDataSet
     Friend WithEvents EquipmentCategoryBindingSource As BindingSource
     Friend WithEvents EquipmentCategoryTableAdapter As EquipmentInventoryDataSetTableAdapters.EquipmentCategoryTableAdapter
@@ -634,4 +577,9 @@ Partial Class frmMainMenu
     Friend WithEvents CmboBxReserveCategory As ComboBox
     Friend WithEvents CmboBxReserveEquipment As ComboBox
     Friend WithEvents txtUsername As TextBox
+    Friend WithEvents LoanRecordsDataSet As LoanRecordsDataSet
+    Friend WithEvents LoanRecordsBindingSource As BindingSource
+    Friend WithEvents LoanRecordsTableAdapter As LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter
+    Friend WithEvents TableAdapterManager As LoanRecordsDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Button2 As Button
 End Class

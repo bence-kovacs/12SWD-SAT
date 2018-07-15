@@ -23,7 +23,6 @@ Partial Class Record_Viewer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Record_Viewer))
         Dim IDLabel As System.Windows.Forms.Label
         Dim UserLabel As System.Windows.Forms.Label
         Dim EquipmentLabel As System.Windows.Forms.Label
@@ -33,24 +32,18 @@ Partial Class Record_Viewer
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
         Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
-        Me.LoanRecordsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.LoanRecordsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.UserTextBox = New System.Windows.Forms.TextBox()
         Me.EquipmentTextBox = New System.Windows.Forms.TextBox()
         Me.Loan_DateTextBox = New System.Windows.Forms.TextBox()
         Me.Return_DateTextBox = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lblDetails = New System.Windows.Forms.Label()
+        Me.lblLoans = New System.Windows.Forms.Label()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.btnFind = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         IDLabel = New System.Windows.Forms.Label()
         UserLabel = New System.Windows.Forms.Label()
         EquipmentLabel = New System.Windows.Forms.Label()
@@ -58,8 +51,6 @@ Partial Class Record_Viewer
         Return_DateLabel = New System.Windows.Forms.Label()
         CType(Me.LoanRecordsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LoanRecordsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.LoanRecordsBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
         'LoanRecordsDataSet
@@ -82,207 +73,188 @@ Partial Class Record_Viewer
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'LoanRecordsBindingNavigator
-        '
-        Me.LoanRecordsBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.LoanRecordsBindingNavigator.BindingSource = Me.LoanRecordsBindingSource
-        Me.LoanRecordsBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.LoanRecordsBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.LoanRecordsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.LoanRecordsBindingNavigatorSaveItem})
-        Me.LoanRecordsBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.LoanRecordsBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.LoanRecordsBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.LoanRecordsBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.LoanRecordsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.LoanRecordsBindingNavigator.Name = "LoanRecordsBindingNavigator"
-        Me.LoanRecordsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.LoanRecordsBindingNavigator.Size = New System.Drawing.Size(800, 25)
-        Me.LoanRecordsBindingNavigator.TabIndex = 0
-        Me.LoanRecordsBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'LoanRecordsBindingNavigatorSaveItem
-        '
-        Me.LoanRecordsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.LoanRecordsBindingNavigatorSaveItem.Image = CType(resources.GetObject("LoanRecordsBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.LoanRecordsBindingNavigatorSaveItem.Name = "LoanRecordsBindingNavigatorSaveItem"
-        Me.LoanRecordsBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.LoanRecordsBindingNavigatorSaveItem.Text = "Save Data"
-        '
         'IDLabel
         '
         IDLabel.AutoSize = True
-        IDLabel.Location = New System.Drawing.Point(51, 79)
+        IDLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IDLabel.Location = New System.Drawing.Point(43, 99)
         IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(21, 13)
+        IDLabel.Size = New System.Drawing.Size(28, 21)
         IDLabel.TabIndex = 1
         IDLabel.Text = "ID:"
         '
         'IDTextBox
         '
         Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "ID", True))
-        Me.IDTextBox.Location = New System.Drawing.Point(125, 76)
+        Me.IDTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IDTextBox.Location = New System.Drawing.Point(145, 96)
         Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IDTextBox.ReadOnly = True
+        Me.IDTextBox.Size = New System.Drawing.Size(208, 29)
         Me.IDTextBox.TabIndex = 2
         '
         'UserLabel
         '
         UserLabel.AutoSize = True
-        UserLabel.Location = New System.Drawing.Point(51, 105)
+        UserLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        UserLabel.Location = New System.Drawing.Point(43, 134)
         UserLabel.Name = "UserLabel"
-        UserLabel.Size = New System.Drawing.Size(32, 13)
+        UserLabel.Size = New System.Drawing.Size(45, 21)
         UserLabel.TabIndex = 3
         UserLabel.Text = "User:"
         '
         'UserTextBox
         '
         Me.UserTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "User", True))
-        Me.UserTextBox.Location = New System.Drawing.Point(125, 102)
+        Me.UserTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserTextBox.Location = New System.Drawing.Point(145, 131)
         Me.UserTextBox.Name = "UserTextBox"
-        Me.UserTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UserTextBox.ReadOnly = True
+        Me.UserTextBox.Size = New System.Drawing.Size(208, 29)
         Me.UserTextBox.TabIndex = 4
         '
         'EquipmentLabel
         '
         EquipmentLabel.AutoSize = True
-        EquipmentLabel.Location = New System.Drawing.Point(51, 131)
+        EquipmentLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        EquipmentLabel.Location = New System.Drawing.Point(43, 169)
         EquipmentLabel.Name = "EquipmentLabel"
-        EquipmentLabel.Size = New System.Drawing.Size(60, 13)
+        EquipmentLabel.Size = New System.Drawing.Size(88, 21)
         EquipmentLabel.TabIndex = 5
         EquipmentLabel.Text = "Equipment:"
         '
         'EquipmentTextBox
         '
         Me.EquipmentTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "Equipment", True))
-        Me.EquipmentTextBox.Location = New System.Drawing.Point(125, 128)
+        Me.EquipmentTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EquipmentTextBox.Location = New System.Drawing.Point(145, 166)
         Me.EquipmentTextBox.Name = "EquipmentTextBox"
-        Me.EquipmentTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.EquipmentTextBox.ReadOnly = True
+        Me.EquipmentTextBox.Size = New System.Drawing.Size(208, 29)
         Me.EquipmentTextBox.TabIndex = 6
         '
         'Loan_DateLabel
         '
         Loan_DateLabel.AutoSize = True
-        Loan_DateLabel.Location = New System.Drawing.Point(51, 157)
+        Loan_DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Loan_DateLabel.Location = New System.Drawing.Point(43, 204)
         Loan_DateLabel.Name = "Loan_DateLabel"
-        Loan_DateLabel.Size = New System.Drawing.Size(60, 13)
+        Loan_DateLabel.Size = New System.Drawing.Size(83, 21)
         Loan_DateLabel.TabIndex = 7
         Loan_DateLabel.Text = "Loan Date:"
         '
         'Loan_DateTextBox
         '
         Me.Loan_DateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "Loan Date", True))
-        Me.Loan_DateTextBox.Location = New System.Drawing.Point(125, 154)
+        Me.Loan_DateTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Loan_DateTextBox.Location = New System.Drawing.Point(145, 201)
         Me.Loan_DateTextBox.Name = "Loan_DateTextBox"
-        Me.Loan_DateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Loan_DateTextBox.ReadOnly = True
+        Me.Loan_DateTextBox.Size = New System.Drawing.Size(208, 29)
         Me.Loan_DateTextBox.TabIndex = 8
         '
         'Return_DateLabel
         '
         Return_DateLabel.AutoSize = True
-        Return_DateLabel.Location = New System.Drawing.Point(51, 183)
+        Return_DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Return_DateLabel.Location = New System.Drawing.Point(43, 239)
         Return_DateLabel.Name = "Return_DateLabel"
-        Return_DateLabel.Size = New System.Drawing.Size(68, 13)
+        Return_DateLabel.Size = New System.Drawing.Size(96, 21)
         Return_DateLabel.TabIndex = 9
         Return_DateLabel.Text = "Return Date:"
         '
         'Return_DateTextBox
         '
         Me.Return_DateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "Return Date", True))
-        Me.Return_DateTextBox.Location = New System.Drawing.Point(125, 180)
+        Me.Return_DateTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Return_DateTextBox.Location = New System.Drawing.Point(145, 236)
         Me.Return_DateTextBox.Name = "Return_DateTextBox"
-        Me.Return_DateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Return_DateTextBox.ReadOnly = True
+        Me.Return_DateTextBox.Size = New System.Drawing.Size(208, 29)
         Me.Return_DateTextBox.TabIndex = 10
+        '
+        'ListBox1
+        '
+        Me.ListBox1.DataSource = Me.LoanRecordsBindingSource
+        Me.ListBox1.DisplayMember = "User"
+        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 21
+        Me.ListBox1.Location = New System.Drawing.Point(483, 96)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(214, 172)
+        Me.ListBox1.TabIndex = 12
+        '
+        'lblDetails
+        '
+        Me.lblDetails.AutoSize = True
+        Me.lblDetails.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDetails.Location = New System.Drawing.Point(96, 27)
+        Me.lblDetails.Name = "lblDetails"
+        Me.lblDetails.Size = New System.Drawing.Size(106, 37)
+        Me.lblDetails.TabIndex = 13
+        Me.lblDetails.Text = "Details"
+        '
+        'lblLoans
+        '
+        Me.lblLoans.AutoSize = True
+        Me.lblLoans.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLoans.Location = New System.Drawing.Point(539, 20)
+        Me.lblLoans.Name = "lblLoans"
+        Me.lblLoans.Size = New System.Drawing.Size(91, 37)
+        Me.lblLoans.TabIndex = 14
+        Me.lblLoans.Text = "Loans"
+        '
+        'txtFind
+        '
+        Me.txtFind.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFind.Location = New System.Drawing.Point(493, 320)
+        Me.txtFind.Name = "txtFind"
+        Me.txtFind.Size = New System.Drawing.Size(187, 26)
+        Me.txtFind.TabIndex = 15
+        '
+        'btnFind
+        '
+        Me.btnFind.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFind.Location = New System.Drawing.Point(702, 314)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(75, 36)
+        Me.btnFind.TabIndex = 16
+        Me.btnFind.Text = "Search"
+        Me.btnFind.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(467, 286)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(257, 25)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "Search by Equipment Name"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(512, 57)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(159, 25)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "View All Records"
         '
         'Record_Viewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(789, 382)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnFind)
+        Me.Controls.Add(Me.txtFind)
+        Me.Controls.Add(Me.lblLoans)
+        Me.Controls.Add(Me.lblDetails)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(IDLabel)
         Me.Controls.Add(Me.IDTextBox)
         Me.Controls.Add(UserLabel)
@@ -293,14 +265,10 @@ Partial Class Record_Viewer
         Me.Controls.Add(Me.Loan_DateTextBox)
         Me.Controls.Add(Return_DateLabel)
         Me.Controls.Add(Me.Return_DateTextBox)
-        Me.Controls.Add(Me.LoanRecordsBindingNavigator)
         Me.Name = "Record_Viewer"
         Me.Text = "Record_Viewer"
         CType(Me.LoanRecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LoanRecordsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.LoanRecordsBindingNavigator.ResumeLayout(False)
-        Me.LoanRecordsBindingNavigator.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -310,22 +278,16 @@ Partial Class Record_Viewer
     Friend WithEvents LoanRecordsBindingSource As BindingSource
     Friend WithEvents LoanRecordsTableAdapter As LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter
     Friend WithEvents TableAdapterManager As LoanRecordsDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents LoanRecordsBindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents LoanRecordsBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents IDTextBox As TextBox
     Friend WithEvents UserTextBox As TextBox
     Friend WithEvents EquipmentTextBox As TextBox
     Friend WithEvents Loan_DateTextBox As TextBox
     Friend WithEvents Return_DateTextBox As TextBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lblDetails As Label
+    Friend WithEvents lblLoans As Label
+    Friend WithEvents txtFind As TextBox
+    Friend WithEvents btnFind As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

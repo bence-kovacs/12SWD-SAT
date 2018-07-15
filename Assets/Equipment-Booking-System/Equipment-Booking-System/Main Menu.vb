@@ -6,6 +6,8 @@ Public Class frmMainMenu
     Private EquipmentData As DataSet
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'LoanRecordsDataSet.LoanRecords' table. You can move, or remove it, as needed.
+        Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
 
         'Load data
         EquipmentData = EquipmentInventory.CreateDataSet()
@@ -55,9 +57,21 @@ Public Class frmMainMenu
     End Sub
 
     Private Sub btnConfirmReservation_Click(sender As Object, e As EventArgs) Handles btnConfirmReservation.Click
+        'Insert information held in relevent fields to the database and show confirmation message
         Record_Viewer.LoanRecordsTableAdapter.Insert(Me.txtUsername.Text, Me.CmboBxReserveEquipment.Text, Me.DteTmeReserve.Text.ToString, Me.DteTmeReserveReturn.Text.ToString)
         Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
-        MsgBox("Record Added Successfully")
+
+        'Save the database with new addition
+        'Me.Validate()
+        'Me.LoanRecordsBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
+        'MsgBox("Record Added Successfully")
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Record_Viewer.Show()
     End Sub
 
     'Private Sub LstDescription_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstDescription.SelectedIndexChanged
