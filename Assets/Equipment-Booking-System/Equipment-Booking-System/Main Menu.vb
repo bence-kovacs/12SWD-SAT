@@ -62,27 +62,14 @@ Public Class frmMainMenu
         Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
 
         'Save the database with new addition
-        'Me.Validate()
-        'Me.LoanRecordsBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
-        'MsgBox("Record Added Successfully")
-
+        Me.Validate()
+        Me.LoanRecordsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
+        MsgBox("Record Added Successfully")
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnViewRecords.Click
         Record_Viewer.Show()
     End Sub
-
-    'Private Sub LstDescription_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstDescription.SelectedIndexChanged
-
-    '    Dim dtvdescription As DataView = EquipmentData.Tables("Description").DefaultView
-    '    dtvdescription.RowFilter = "IDSelection =" + LstDescription.SelectedValue.ToString
-
-    '    With LstDescription
-    '        .DisplayMember = "Description"
-    '        .ValueMember = "ID"
-    '        .DataSource = dtvdescription
-    '    End With
-    'End Sub
 End Class

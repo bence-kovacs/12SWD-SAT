@@ -71,7 +71,7 @@ Partial Class frmMainMenu
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
         Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnViewRecords = New System.Windows.Forms.Button()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,7 +109,8 @@ Partial Class frmMainMenu
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button2)
+        Me.TabPage3.AutoScroll = True
+        Me.TabPage3.Controls.Add(Me.btnViewRecords)
         Me.TabPage3.Controls.Add(Me.Label8)
         Me.TabPage3.Location = New System.Drawing.Point(4, 40)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
@@ -494,14 +495,14 @@ Partial Class frmMainMenu
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Button2
+        'btnViewRecords
         '
-        Me.Button2.Location = New System.Drawing.Point(328, 204)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 50)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "View Records"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnViewRecords.Location = New System.Drawing.Point(328, 204)
+        Me.btnViewRecords.Name = "btnViewRecords"
+        Me.btnViewRecords.Size = New System.Drawing.Size(75, 50)
+        Me.btnViewRecords.TabIndex = 24
+        Me.btnViewRecords.Text = "View Records"
+        Me.btnViewRecords.UseVisualStyleBackColor = True
         '
         'frmMainMenu
         '
@@ -581,5 +582,5 @@ Partial Class frmMainMenu
     Friend WithEvents LoanRecordsBindingSource As BindingSource
     Friend WithEvents LoanRecordsTableAdapter As LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter
     Friend WithEvents TableAdapterManager As LoanRecordsDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnViewRecords As Button
 End Class

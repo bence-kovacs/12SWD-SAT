@@ -44,6 +44,7 @@ Partial Class Record_Viewer
         Me.btnFind = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnSave = New System.Windows.Forms.Button()
         IDLabel = New System.Windows.Forms.Label()
         UserLabel = New System.Windows.Forms.Label()
         EquipmentLabel = New System.Windows.Forms.Label()
@@ -243,11 +244,21 @@ Partial Class Record_Viewer
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "View All Records"
         '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(166, 314)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.TabIndex = 19
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
         'Record_Viewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(789, 382)
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnFind)
@@ -290,4 +301,5 @@ Partial Class Record_Viewer
     Friend WithEvents btnFind As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnSave As Button
 End Class
