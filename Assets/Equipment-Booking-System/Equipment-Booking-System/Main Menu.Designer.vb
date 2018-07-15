@@ -37,16 +37,19 @@ Partial Class frmMainMenu
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.CmboBxReserveEquipment = New System.Windows.Forms.ComboBox()
+        Me.CmboBxReserveCategory = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DteTmeReserveReturn = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnConfirmReservation = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DteTmeReserve = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabLoan = New System.Windows.Forms.TabPage()
@@ -72,8 +75,6 @@ Partial Class frmMainMenu
         Me.EquipmentVideoTableAdapter = New Equipment_Booking_System.EquipmentInventoryDataSetTableAdapters.EquipmentVideoTableAdapter()
         Me.EquipmentInventoryDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EquipmentAudioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CmboBxReserveCategory = New System.Windows.Forms.ComboBox()
-        Me.CmboBxReserveEquipment = New System.Windows.Forms.ComboBox()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,18 +211,19 @@ Partial Class frmMainMenu
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.txtUsername)
         Me.TabPage2.Controls.Add(Me.CmboBxReserveEquipment)
         Me.TabPage2.Controls.Add(Me.CmboBxReserveCategory)
         Me.TabPage2.Controls.Add(Me.Label7)
-        Me.TabPage2.Controls.Add(Me.DateTimePicker3)
+        Me.TabPage2.Controls.Add(Me.DteTmeReserveReturn)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.ListBox2)
         Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.Controls.Add(Me.Button1)
-        Me.TabPage2.Controls.Add(Me.Button2)
+        Me.TabPage2.Controls.Add(Me.btnConfirmReservation)
         Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage2.Controls.Add(Me.DteTmeReserve)
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Location = New System.Drawing.Point(4, 40)
@@ -232,6 +234,33 @@ Partial Class frmMainMenu
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "                       Reserve                       "
         '
+        'txtUsername
+        '
+        Me.txtUsername.Location = New System.Drawing.Point(249, 110)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(100, 25)
+        Me.txtUsername.TabIndex = 28
+        '
+        'CmboBxReserveEquipment
+        '
+        Me.CmboBxReserveEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmboBxReserveEquipment.FormattingEnabled = True
+        Me.CmboBxReserveEquipment.Items.AddRange(New Object() {"Video", "Audio"})
+        Me.CmboBxReserveEquipment.Location = New System.Drawing.Point(51, 199)
+        Me.CmboBxReserveEquipment.Name = "CmboBxReserveEquipment"
+        Me.CmboBxReserveEquipment.Size = New System.Drawing.Size(170, 25)
+        Me.CmboBxReserveEquipment.TabIndex = 27
+        '
+        'CmboBxReserveCategory
+        '
+        Me.CmboBxReserveCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmboBxReserveCategory.FormattingEnabled = True
+        Me.CmboBxReserveCategory.Items.AddRange(New Object() {"Video", "Audio"})
+        Me.CmboBxReserveCategory.Location = New System.Drawing.Point(51, 110)
+        Me.CmboBxReserveCategory.Name = "CmboBxReserveCategory"
+        Me.CmboBxReserveCategory.Size = New System.Drawing.Size(170, 25)
+        Me.CmboBxReserveCategory.TabIndex = 26
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -241,12 +270,12 @@ Partial Class frmMainMenu
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "DATE OF RETURN"
         '
-        'DateTimePicker3
+        'DteTmeReserveReturn
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(51, 352)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(236, 25)
-        Me.DateTimePicker3.TabIndex = 24
+        Me.DteTmeReserveReturn.Location = New System.Drawing.Point(51, 352)
+        Me.DteTmeReserveReturn.Name = "DteTmeReserveReturn"
+        Me.DteTmeReserveReturn.Size = New System.Drawing.Size(236, 25)
+        Me.DteTmeReserveReturn.TabIndex = 24
         '
         'Label2
         '
@@ -294,14 +323,14 @@ Partial Class frmMainMenu
         Me.Button1.Text = "Clear"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnConfirmReservation
         '
-        Me.Button2.Location = New System.Drawing.Point(51, 402)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 44)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Confirm Selection"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnConfirmReservation.Location = New System.Drawing.Point(51, 402)
+        Me.btnConfirmReservation.Name = "btnConfirmReservation"
+        Me.btnConfirmReservation.Size = New System.Drawing.Size(109, 44)
+        Me.btnConfirmReservation.TabIndex = 18
+        Me.btnConfirmReservation.Text = "Confirm Selection"
+        Me.btnConfirmReservation.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -312,12 +341,12 @@ Partial Class frmMainMenu
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "DATE OF LOAN"
         '
-        'DateTimePicker2
+        'DteTmeReserve
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(51, 275)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(236, 25)
-        Me.DateTimePicker2.TabIndex = 16
+        Me.DteTmeReserve.Location = New System.Drawing.Point(51, 275)
+        Me.DteTmeReserve.Name = "DteTmeReserve"
+        Me.DteTmeReserve.Size = New System.Drawing.Size(236, 25)
+        Me.DteTmeReserve.TabIndex = 16
         '
         'Label5
         '
@@ -525,26 +554,6 @@ Partial Class frmMainMenu
         Me.EquipmentAudioBindingSource1.DataMember = "EquipmentAudio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.EquipmentAudioBindingSource1.DataSource = Me.EquipmentInventoryDataSetBindingSource
         '
-        'CmboBxReserveCategory
-        '
-        Me.CmboBxReserveCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmboBxReserveCategory.FormattingEnabled = True
-        Me.CmboBxReserveCategory.Items.AddRange(New Object() {"Video", "Audio"})
-        Me.CmboBxReserveCategory.Location = New System.Drawing.Point(51, 110)
-        Me.CmboBxReserveCategory.Name = "CmboBxReserveCategory"
-        Me.CmboBxReserveCategory.Size = New System.Drawing.Size(170, 25)
-        Me.CmboBxReserveCategory.TabIndex = 26
-        '
-        'CmboBxReserveEquipment
-        '
-        Me.CmboBxReserveEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmboBxReserveEquipment.FormattingEnabled = True
-        Me.CmboBxReserveEquipment.Items.AddRange(New Object() {"Video", "Audio"})
-        Me.CmboBxReserveEquipment.Location = New System.Drawing.Point(51, 199)
-        Me.CmboBxReserveEquipment.Name = "CmboBxReserveEquipment"
-        Me.CmboBxReserveEquipment.Size = New System.Drawing.Size(170, 25)
-        Me.CmboBxReserveEquipment.TabIndex = 27
-        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -583,9 +592,9 @@ Partial Class frmMainMenu
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnConfirmReservation As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DteTmeReserve As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Private WithEvents TabLoan As TabPage
@@ -606,7 +615,7 @@ Partial Class frmMainMenu
     Friend WithEvents ListBox3 As ListBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents DteTmeReserveReturn As DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label12 As Label
@@ -624,4 +633,5 @@ Partial Class frmMainMenu
     Friend WithEvents EquipmentAudioBindingSource1 As BindingSource
     Friend WithEvents CmboBxReserveCategory As ComboBox
     Friend WithEvents CmboBxReserveEquipment As ComboBox
+    Friend WithEvents txtUsername As TextBox
 End Class

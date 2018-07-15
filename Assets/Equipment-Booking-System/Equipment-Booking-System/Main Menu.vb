@@ -54,6 +54,12 @@ Public Class frmMainMenu
 
     End Sub
 
+    Private Sub btnConfirmReservation_Click(sender As Object, e As EventArgs) Handles btnConfirmReservation.Click
+        Record_Viewer.LoanRecordsTableAdapter.Insert(Me.txtUsername.Text, Me.CmboBxReserveEquipment.Text, Me.DteTmeReserve.Text.ToString, Me.DteTmeReserveReturn.Text.ToString)
+        Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
+        MsgBox("Record Added Successfully")
+    End Sub
+
     'Private Sub LstDescription_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstDescription.SelectedIndexChanged
 
     '    Dim dtvdescription As DataView = EquipmentData.Tables("Description").DefaultView

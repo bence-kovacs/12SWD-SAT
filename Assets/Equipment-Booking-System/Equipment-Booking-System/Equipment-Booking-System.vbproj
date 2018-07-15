@@ -126,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Record Viewer.Designer.vb">
+      <DependentUpon>Record Viewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Record Viewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UsersDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +150,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record Viewer.resx">
+      <DependentUpon>Record Viewer.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
