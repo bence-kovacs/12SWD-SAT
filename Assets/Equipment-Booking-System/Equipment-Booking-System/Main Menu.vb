@@ -7,7 +7,7 @@ Public Class frmMainMenu
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'LoanRecordsDataSet.LoanRecords' table. You can move, or remove it, as needed.
-        Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
+        'Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
 
         'Load data
         EquipmentData = EquipmentInventory.CreateDataSet()
@@ -62,14 +62,20 @@ Public Class frmMainMenu
         Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
 
         'Save the database with new addition
-        Me.Validate()
-        Me.LoanRecordsBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
-        MsgBox("Record Added Successfully")
+        'Me.Validate()
+        'Me.LoanRecordsBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
+        'MsgBox("Record Added Successfully")
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnViewRecords.Click
         Record_Viewer.Show()
+    End Sub
+
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Me.Close()
+        Record_Viewer.Close()
+        frmLogin.Close()
     End Sub
 End Class

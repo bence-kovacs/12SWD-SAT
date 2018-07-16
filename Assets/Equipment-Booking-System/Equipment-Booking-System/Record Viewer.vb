@@ -16,10 +16,10 @@
     '    Me.LoanRecordsBindingSource.Filter = "[Equipment] = '" & Me.txtFind.Text & " ' "
     'End Sub
 
-    'Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-    '    Me.Validate()
-    '    Me.LoanRecordsBindingSource.EndEdit()
-    '    Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
-    '    MsgBox("Record Details Saved Successfully")
-    'End Sub
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Me.Validate()
+        Me.LoanRecordsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
+        MsgBox("Record Details Saved Successfully")
+    End Sub
 End Class

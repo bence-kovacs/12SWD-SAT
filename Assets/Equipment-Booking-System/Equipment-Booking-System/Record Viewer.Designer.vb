@@ -54,6 +54,56 @@ Partial Class Record_Viewer
         CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'IDLabel
+        '
+        IDLabel.AutoSize = True
+        IDLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IDLabel.Location = New System.Drawing.Point(43, 99)
+        IDLabel.Name = "IDLabel"
+        IDLabel.Size = New System.Drawing.Size(28, 21)
+        IDLabel.TabIndex = 1
+        IDLabel.Text = "ID:"
+        '
+        'UserLabel
+        '
+        UserLabel.AutoSize = True
+        UserLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        UserLabel.Location = New System.Drawing.Point(43, 134)
+        UserLabel.Name = "UserLabel"
+        UserLabel.Size = New System.Drawing.Size(45, 21)
+        UserLabel.TabIndex = 3
+        UserLabel.Text = "User:"
+        '
+        'EquipmentLabel
+        '
+        EquipmentLabel.AutoSize = True
+        EquipmentLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        EquipmentLabel.Location = New System.Drawing.Point(43, 169)
+        EquipmentLabel.Name = "EquipmentLabel"
+        EquipmentLabel.Size = New System.Drawing.Size(88, 21)
+        EquipmentLabel.TabIndex = 5
+        EquipmentLabel.Text = "Equipment:"
+        '
+        'Loan_DateLabel
+        '
+        Loan_DateLabel.AutoSize = True
+        Loan_DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Loan_DateLabel.Location = New System.Drawing.Point(43, 204)
+        Loan_DateLabel.Name = "Loan_DateLabel"
+        Loan_DateLabel.Size = New System.Drawing.Size(83, 21)
+        Loan_DateLabel.TabIndex = 7
+        Loan_DateLabel.Text = "Loan Date:"
+        '
+        'Return_DateLabel
+        '
+        Return_DateLabel.AutoSize = True
+        Return_DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Return_DateLabel.Location = New System.Drawing.Point(43, 239)
+        Return_DateLabel.Name = "Return_DateLabel"
+        Return_DateLabel.Size = New System.Drawing.Size(96, 21)
+        Return_DateLabel.TabIndex = 9
+        Return_DateLabel.Text = "Return Date:"
+        '
         'LoanRecordsDataSet
         '
         Me.LoanRecordsDataSet.DataSetName = "LoanRecordsDataSet"
@@ -74,16 +124,6 @@ Partial Class Record_Viewer
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IDLabel.Location = New System.Drawing.Point(43, 99)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(28, 21)
-        IDLabel.TabIndex = 1
-        IDLabel.Text = "ID:"
-        '
         'IDTextBox
         '
         Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "ID", True))
@@ -93,16 +133,6 @@ Partial Class Record_Viewer
         Me.IDTextBox.ReadOnly = True
         Me.IDTextBox.Size = New System.Drawing.Size(208, 29)
         Me.IDTextBox.TabIndex = 2
-        '
-        'UserLabel
-        '
-        UserLabel.AutoSize = True
-        UserLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        UserLabel.Location = New System.Drawing.Point(43, 134)
-        UserLabel.Name = "UserLabel"
-        UserLabel.Size = New System.Drawing.Size(45, 21)
-        UserLabel.TabIndex = 3
-        UserLabel.Text = "User:"
         '
         'UserTextBox
         '
@@ -114,16 +144,6 @@ Partial Class Record_Viewer
         Me.UserTextBox.Size = New System.Drawing.Size(208, 29)
         Me.UserTextBox.TabIndex = 4
         '
-        'EquipmentLabel
-        '
-        EquipmentLabel.AutoSize = True
-        EquipmentLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        EquipmentLabel.Location = New System.Drawing.Point(43, 169)
-        EquipmentLabel.Name = "EquipmentLabel"
-        EquipmentLabel.Size = New System.Drawing.Size(88, 21)
-        EquipmentLabel.TabIndex = 5
-        EquipmentLabel.Text = "Equipment:"
-        '
         'EquipmentTextBox
         '
         Me.EquipmentTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "Equipment", True))
@@ -134,16 +154,6 @@ Partial Class Record_Viewer
         Me.EquipmentTextBox.Size = New System.Drawing.Size(208, 29)
         Me.EquipmentTextBox.TabIndex = 6
         '
-        'Loan_DateLabel
-        '
-        Loan_DateLabel.AutoSize = True
-        Loan_DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Loan_DateLabel.Location = New System.Drawing.Point(43, 204)
-        Loan_DateLabel.Name = "Loan_DateLabel"
-        Loan_DateLabel.Size = New System.Drawing.Size(83, 21)
-        Loan_DateLabel.TabIndex = 7
-        Loan_DateLabel.Text = "Loan Date:"
-        '
         'Loan_DateTextBox
         '
         Me.Loan_DateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LoanRecordsBindingSource, "Loan Date", True))
@@ -153,16 +163,6 @@ Partial Class Record_Viewer
         Me.Loan_DateTextBox.ReadOnly = True
         Me.Loan_DateTextBox.Size = New System.Drawing.Size(208, 29)
         Me.Loan_DateTextBox.TabIndex = 8
-        '
-        'Return_DateLabel
-        '
-        Return_DateLabel.AutoSize = True
-        Return_DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Return_DateLabel.Location = New System.Drawing.Point(43, 239)
-        Return_DateLabel.Name = "Return_DateLabel"
-        Return_DateLabel.Size = New System.Drawing.Size(96, 21)
-        Return_DateLabel.TabIndex = 9
-        Return_DateLabel.Text = "Return Date:"
         '
         'Return_DateTextBox
         '

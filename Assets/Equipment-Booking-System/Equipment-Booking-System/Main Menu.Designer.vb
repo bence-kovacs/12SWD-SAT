@@ -27,6 +27,7 @@ Partial Class frmMainMenu
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.btnViewRecords = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -71,7 +72,6 @@ Partial Class frmMainMenu
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
         Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
-        Me.btnViewRecords = New System.Windows.Forms.Button()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,6 +119,15 @@ Partial Class frmMainMenu
         Me.TabPage3.Size = New System.Drawing.Size(775, 483)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "                       View                       "
+        '
+        'btnViewRecords
+        '
+        Me.btnViewRecords.Location = New System.Drawing.Point(328, 204)
+        Me.btnViewRecords.Name = "btnViewRecords"
+        Me.btnViewRecords.Size = New System.Drawing.Size(75, 50)
+        Me.btnViewRecords.TabIndex = 24
+        Me.btnViewRecords.Text = "View Records"
+        Me.btnViewRecords.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -494,15 +503,6 @@ Partial Class frmMainMenu
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'btnViewRecords
-        '
-        Me.btnViewRecords.Location = New System.Drawing.Point(328, 204)
-        Me.btnViewRecords.Name = "btnViewRecords"
-        Me.btnViewRecords.Size = New System.Drawing.Size(75, 50)
-        Me.btnViewRecords.TabIndex = 24
-        Me.btnViewRecords.Text = "View Records"
-        Me.btnViewRecords.UseVisualStyleBackColor = True
         '
         'frmMainMenu
         '
