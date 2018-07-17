@@ -173,7 +173,7 @@ Partial Class frmMainMenu
         '
         'CmboBxReserveEquipment
         '
-        Me.CmboBxReserveEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmboBxReserveEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.CmboBxReserveEquipment.FormattingEnabled = True
         Me.CmboBxReserveEquipment.Items.AddRange(New Object() {"Video", "Audio"})
         Me.CmboBxReserveEquipment.Location = New System.Drawing.Point(51, 199)

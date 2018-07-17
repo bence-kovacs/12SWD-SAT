@@ -6,25 +6,25 @@ Public Class frmMainMenu
     Private EquipmentData As DataSet
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'LoanRecordsDataSet.LoanRecords' table. You can move, or remove it, as needed.
-        'Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
+        ''TODO: This line of code loads data into the 'LoanRecordsDataSet.LoanRecords' table. You can move, or remove it, as needed.
+        ''Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
 
-        'Load data
-        EquipmentData = EquipmentInventory.CreateDataSet()
+        ''Load data
+        'EquipmentData = EquipmentInventory.CreateDataSet()
 
-        'Bind the loan category combo box with its relevant values
-        With CmboBxLoanCategory
-            .DisplayMember = "Description"
-            .ValueMember = "ID"
-            .DataSource = EquipmentData.Tables("Categories")
-        End With
+        ''Bind the loan category combo box with its relevant values
+        'With CmboBxLoanCategory
+        '    .DisplayMember = "Description"
+        '    .ValueMember = "ID"
+        '    .DataSource = EquipmentData.Tables("Categories")
+        'End With
 
-        'Bind the reserve category combo box with its relevant values
-        With CmboBxReserveCategory
-            .DisplayMember = "Description"
-            .ValueMember = "ID"
-            .DataSource = EquipmentData.Tables("Categories")
-        End With
+        ''Bind the reserve category combo box with its relevant values
+        'With CmboBxReserveCategory
+        '    .DisplayMember = "Description"
+        '    .ValueMember = "ID"
+        '    .DataSource = EquipmentData.Tables("Categories")
+        'End With
     End Sub
 
     Private Sub CmboBxLoanCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmboBxLoanCategory.SelectedIndexChanged
