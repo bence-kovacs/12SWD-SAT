@@ -10,21 +10,21 @@ Public Class frmMainMenu
         ''Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
 
         ''Load data
-        'EquipmentData = EquipmentInventory.CreateDataSet()
+        EquipmentData = EquipmentInventory.CreateDataSet()
 
-        ''Bind the loan category combo box with its relevant values
-        'With CmboBxLoanCategory
-        '    .DisplayMember = "Description"
-        '    .ValueMember = "ID"
-        '    .DataSource = EquipmentData.Tables("Categories")
-        'End With
+        'Bind the loan category combo box with its relevant values
+        With CmboBxLoanCategory
+            .DisplayMember = "Description"
+            .ValueMember = "ID"
+            .DataSource = EquipmentData.Tables("Categories")
+        End With
 
-        ''Bind the reserve category combo box with its relevant values
-        'With CmboBxReserveCategory
-        '    .DisplayMember = "Description"
-        '    .ValueMember = "ID"
-        '    .DataSource = EquipmentData.Tables("Categories")
-        'End With
+        'Bind the reserve category combo box with its relevant values
+        With CmboBxReserveCategory
+            .DisplayMember = "Description"
+            .ValueMember = "ID"
+            .DataSource = EquipmentData.Tables("Categories")
+        End With
     End Sub
 
     Private Sub CmboBxLoanCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmboBxLoanCategory.SelectedIndexChanged
@@ -62,10 +62,10 @@ Public Class frmMainMenu
         Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
 
         'Save the database with new addition
-        'Me.Validate()
-        'Me.LoanRecordsBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
-        'MsgBox("Record Added Successfully")
+        Me.Validate()
+        Me.LoanRecordsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
+        MsgBox("Record Added Successfully")
 
     End Sub
 

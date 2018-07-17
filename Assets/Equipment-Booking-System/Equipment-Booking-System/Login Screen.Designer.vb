@@ -28,7 +28,6 @@ Partial Class frmLogin
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.lblClose = New System.Windows.Forms.Label()
         Me.chkShowPassword = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblLoanDetails
@@ -109,15 +108,6 @@ Partial Class frmLogin
         Me.chkShowPassword.Text = "Show Password"
         Me.chkShowPassword.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(33, 262)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 29
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -125,7 +115,6 @@ Partial Class frmLogin
         Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(405, 344)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkShowPassword)
         Me.Controls.Add(Me.lblClose)
         Me.Controls.Add(Me.btnLogin)
@@ -146,5 +135,4 @@ Partial Class frmLogin
     Friend WithEvents btnLogin As Button
     Friend WithEvents lblClose As Label
     Friend WithEvents chkShowPassword As CheckBox
-    Friend WithEvents Button1 As Button
 End Class
