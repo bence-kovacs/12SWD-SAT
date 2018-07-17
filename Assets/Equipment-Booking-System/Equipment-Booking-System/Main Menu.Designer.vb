@@ -30,7 +30,8 @@ Partial Class frmMainMenu
         Me.btnViewRecords = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.lblReserveName = New System.Windows.Forms.Label()
+        Me.txtReserveName = New System.Windows.Forms.TextBox()
         Me.CmboBxReserveEquipment = New System.Windows.Forms.ComboBox()
         Me.CmboBxReserveCategory = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -43,11 +44,15 @@ Partial Class frmMainMenu
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabLoan = New System.Windows.Forms.TabPage()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.DteTmeLoan = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtLoanName = New System.Windows.Forms.TextBox()
         Me.lblLoanDetails = New System.Windows.Forms.Label()
         Me.btnClearLoan = New System.Windows.Forms.Button()
         Me.btnConfirmLoan = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DteTmeLoanReturn = New System.Windows.Forms.DateTimePicker()
         Me.CmboBxLoanEquipment = New System.Windows.Forms.ComboBox()
         Me.EquipmentAudioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EquipmentInventoryDataSet = New Equipment_Booking_System.EquipmentInventoryDataSet()
@@ -66,11 +71,6 @@ Partial Class frmMainMenu
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
         Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
-        Me.lblReserveName = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabLoan.SuspendLayout()
@@ -139,7 +139,7 @@ Partial Class frmMainMenu
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.lblReserveName)
-        Me.TabPage2.Controls.Add(Me.txtUsername)
+        Me.TabPage2.Controls.Add(Me.txtReserveName)
         Me.TabPage2.Controls.Add(Me.CmboBxReserveEquipment)
         Me.TabPage2.Controls.Add(Me.CmboBxReserveCategory)
         Me.TabPage2.Controls.Add(Me.Label7)
@@ -160,13 +160,22 @@ Partial Class frmMainMenu
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "                       Reserve                       "
         '
-        'txtUsername
+        'lblReserveName
         '
-        Me.txtUsername.Location = New System.Drawing.Point(304, 331)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(169, 25)
-        Me.txtUsername.TabIndex = 28
-        Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.lblReserveName.AutoSize = True
+        Me.lblReserveName.Location = New System.Drawing.Point(359, 311)
+        Me.lblReserveName.Name = "lblReserveName"
+        Me.lblReserveName.Size = New System.Drawing.Size(44, 17)
+        Me.lblReserveName.TabIndex = 29
+        Me.lblReserveName.Text = "Name"
+        '
+        'txtReserveName
+        '
+        Me.txtReserveName.Location = New System.Drawing.Point(304, 331)
+        Me.txtReserveName.Name = "txtReserveName"
+        Me.txtReserveName.Size = New System.Drawing.Size(169, 25)
+        Me.txtReserveName.TabIndex = 28
+        Me.txtReserveName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CmboBxReserveEquipment
         '
@@ -272,14 +281,14 @@ Partial Class frmMainMenu
         '
         Me.TabLoan.BackColor = System.Drawing.Color.Transparent
         Me.TabLoan.Controls.Add(Me.Label9)
-        Me.TabLoan.Controls.Add(Me.DateTimePicker2)
+        Me.TabLoan.Controls.Add(Me.DteTmeLoan)
         Me.TabLoan.Controls.Add(Me.Label2)
-        Me.TabLoan.Controls.Add(Me.TextBox1)
+        Me.TabLoan.Controls.Add(Me.txtLoanName)
         Me.TabLoan.Controls.Add(Me.lblLoanDetails)
         Me.TabLoan.Controls.Add(Me.btnClearLoan)
         Me.TabLoan.Controls.Add(Me.btnConfirmLoan)
         Me.TabLoan.Controls.Add(Me.Label1)
-        Me.TabLoan.Controls.Add(Me.DateTimePicker1)
+        Me.TabLoan.Controls.Add(Me.DteTmeLoanReturn)
         Me.TabLoan.Controls.Add(Me.CmboBxLoanEquipment)
         Me.TabLoan.Controls.Add(Me.lblEquipment)
         Me.TabLoan.Controls.Add(Me.CmboBxLoanCategory)
@@ -291,6 +300,39 @@ Partial Class frmMainMenu
         Me.TabLoan.Size = New System.Drawing.Size(775, 483)
         Me.TabLoan.TabIndex = 0
         Me.TabLoan.Text = "                       Loan                       "
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(522, 131)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(102, 17)
+        Me.Label9.TabIndex = 33
+        Me.Label9.Text = "DATE OF LOAN"
+        '
+        'DteTmeLoan
+        '
+        Me.DteTmeLoan.Location = New System.Drawing.Point(458, 164)
+        Me.DteTmeLoan.Name = "DteTmeLoan"
+        Me.DteTmeLoan.Size = New System.Drawing.Size(236, 25)
+        Me.DteTmeLoan.TabIndex = 32
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(362, 322)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 17)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Name"
+        '
+        'txtLoanName
+        '
+        Me.txtLoanName.Location = New System.Drawing.Point(307, 342)
+        Me.txtLoanName.Name = "txtLoanName"
+        Me.txtLoanName.Size = New System.Drawing.Size(169, 25)
+        Me.txtLoanName.TabIndex = 30
+        Me.txtLoanName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblLoanDetails
         '
@@ -329,12 +371,12 @@ Partial Class frmMainMenu
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "DATE OF RETURN"
         '
-        'DateTimePicker1
+        'DteTmeLoanReturn
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(458, 236)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(236, 25)
-        Me.DateTimePicker1.TabIndex = 16
+        Me.DteTmeLoanReturn.Location = New System.Drawing.Point(458, 236)
+        Me.DteTmeLoanReturn.Name = "DteTmeLoanReturn"
+        Me.DteTmeLoanReturn.Size = New System.Drawing.Size(236, 25)
+        Me.DteTmeLoanReturn.TabIndex = 16
         '
         'CmboBxLoanEquipment
         '
@@ -450,48 +492,6 @@ Partial Class frmMainMenu
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'lblReserveName
-        '
-        Me.lblReserveName.AutoSize = True
-        Me.lblReserveName.Location = New System.Drawing.Point(359, 311)
-        Me.lblReserveName.Name = "lblReserveName"
-        Me.lblReserveName.Size = New System.Drawing.Size(44, 17)
-        Me.lblReserveName.TabIndex = 29
-        Me.lblReserveName.Text = "Name"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(362, 322)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 17)
-        Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Name"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(307, 342)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(169, 25)
-        Me.TextBox1.TabIndex = 30
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(522, 131)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(102, 17)
-        Me.Label9.TabIndex = 33
-        Me.Label9.Text = "DATE OF LOAN"
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(458, 164)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(236, 25)
-        Me.DateTimePicker2.TabIndex = 32
-        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -537,7 +537,7 @@ Partial Class frmMainMenu
     Friend WithEvents btnClearLoan As Button
     Friend WithEvents btnConfirmLoan As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DteTmeLoanReturn As DateTimePicker
     Friend WithEvents CmboBxLoanEquipment As ComboBox
     Friend WithEvents lblEquipment As Label
     Friend WithEvents CmboBxLoanCategory As ComboBox
@@ -557,7 +557,7 @@ Partial Class frmMainMenu
     Friend WithEvents EquipmentAudioBindingSource1 As BindingSource
     Friend WithEvents CmboBxReserveCategory As ComboBox
     Friend WithEvents CmboBxReserveEquipment As ComboBox
-    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtReserveName As TextBox
     Friend WithEvents LoanRecordsDataSet As LoanRecordsDataSet
     Friend WithEvents LoanRecordsBindingSource As BindingSource
     Friend WithEvents LoanRecordsTableAdapter As LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter
@@ -565,7 +565,7 @@ Partial Class frmMainMenu
     Friend WithEvents btnViewRecords As Button
     Friend WithEvents lblReserveName As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtLoanName As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DteTmeLoan As DateTimePicker
 End Class

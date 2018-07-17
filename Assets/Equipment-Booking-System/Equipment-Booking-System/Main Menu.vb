@@ -57,15 +57,15 @@ Public Class frmMainMenu
     End Sub
 
     Private Sub btnConfirmReservation_Click(sender As Object, e As EventArgs) Handles btnConfirmReservation.Click
-        'Insert information held in relevent fields to the database and show confirmation message
-        Record_Viewer.LoanRecordsTableAdapter.Insert(Me.txtUsername.Text, Me.CmboBxReserveEquipment.Text, Me.DteTmeReserve.Text.ToString, Me.DteTmeReserveReturn.Text.ToString)
+        'Insert information held in reserve fields to the database and show confirmation message
+        Record_Viewer.LoanRecordsTableAdapter.Insert(Me.txtReserveName.Text, Me.CmboBxReserveEquipment.Text, Me.DteTmeReserve.Text.ToString, Me.DteTmeReserveReturn.Text.ToString)
         Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
 
         'Save the database with new addition
         Me.Validate()
         Me.LoanRecordsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
-        MsgBox("Record Added Successfully")
+        MsgBox("Reservation Added Successfully")
 
     End Sub
 
@@ -77,5 +77,17 @@ Public Class frmMainMenu
         Me.Close()
         Record_Viewer.Close()
         frmLogin.Close()
+    End Sub
+
+    Private Sub btnConfirmLoan_Click(sender As Object, e As EventArgs) Handles btnConfirmLoan.Click
+        'Insert information from loan tab into the database and show confirmation message
+        Record_Viewer.LoanRecordsTableAdapter.Insert(Me.txtLoanName.Text, Me.CmboBxLoanEquipment.Text, Me.DteTmeLoan.Text.ToString, Me.DteTmeLoanReturn.Text.ToString)
+        Record_Viewer.LoanRecordsTableAdapter.Fill(Record_Viewer.LoanRecordsDataSet.LoanRecords)
+
+        'Save database with new addtion
+        Me.Validate()
+        Me.LoanRecordsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
+        MsgBox("Loan Added Successfully")
     End Sub
 End Class
