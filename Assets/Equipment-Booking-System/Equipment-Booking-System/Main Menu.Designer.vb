@@ -529,6 +529,7 @@ Partial Class frmMainMenu
         Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.TbCntrl)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

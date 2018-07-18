@@ -279,7 +279,7 @@ Partial Class Record_Viewer
         Me.Controls.Add(Me.Return_DateTextBox)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Record_Viewer"
-        Me.Text = "View Records"
+        Me.Text = "Equipment Booker: Records"
         CType(Me.LoanRecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
