@@ -71,6 +71,10 @@ Partial Class frmMainMenu
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
         Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
+        Me.lblLoanLength = New System.Windows.Forms.Label()
+        Me.txtLoanLength = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtReservationLength = New System.Windows.Forms.TextBox()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabLoan.SuspendLayout()
@@ -138,6 +142,8 @@ Partial Class frmMainMenu
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label10)
+        Me.TabPage2.Controls.Add(Me.txtReservationLength)
         Me.TabPage2.Controls.Add(Me.lblReserveName)
         Me.TabPage2.Controls.Add(Me.txtReserveName)
         Me.TabPage2.Controls.Add(Me.CmboBxReserveEquipment)
@@ -163,15 +169,15 @@ Partial Class frmMainMenu
         'lblReserveName
         '
         Me.lblReserveName.AutoSize = True
-        Me.lblReserveName.Location = New System.Drawing.Point(359, 311)
+        Me.lblReserveName.Location = New System.Drawing.Point(181, 284)
         Me.lblReserveName.Name = "lblReserveName"
-        Me.lblReserveName.Size = New System.Drawing.Size(44, 17)
+        Me.lblReserveName.Size = New System.Drawing.Size(46, 17)
         Me.lblReserveName.TabIndex = 29
-        Me.lblReserveName.Text = "Name"
+        Me.lblReserveName.Text = "NAME"
         '
         'txtReserveName
         '
-        Me.txtReserveName.Location = New System.Drawing.Point(304, 331)
+        Me.txtReserveName.Location = New System.Drawing.Point(126, 304)
         Me.txtReserveName.Name = "txtReserveName"
         Me.txtReserveName.Size = New System.Drawing.Size(169, 25)
         Me.txtReserveName.TabIndex = 28
@@ -210,7 +216,7 @@ Partial Class frmMainMenu
         '
         'DteTmeReserveReturn
         '
-        Me.DteTmeReserveReturn.Location = New System.Drawing.Point(456, 236)
+        Me.DteTmeReserveReturn.Location = New System.Drawing.Point(458, 236)
         Me.DteTmeReserveReturn.Name = "DteTmeReserveReturn"
         Me.DteTmeReserveReturn.Size = New System.Drawing.Size(236, 25)
         Me.DteTmeReserveReturn.TabIndex = 24
@@ -280,6 +286,8 @@ Partial Class frmMainMenu
         'TabLoan
         '
         Me.TabLoan.BackColor = System.Drawing.Color.Transparent
+        Me.TabLoan.Controls.Add(Me.lblLoanLength)
+        Me.TabLoan.Controls.Add(Me.txtLoanLength)
         Me.TabLoan.Controls.Add(Me.Label9)
         Me.TabLoan.Controls.Add(Me.DteTmeLoan)
         Me.TabLoan.Controls.Add(Me.Label2)
@@ -320,15 +328,15 @@ Partial Class frmMainMenu
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(362, 322)
+        Me.Label2.Location = New System.Drawing.Point(181, 284)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 17)
+        Me.Label2.Size = New System.Drawing.Size(46, 17)
         Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Name"
+        Me.Label2.Text = "NAME"
         '
         'txtLoanName
         '
-        Me.txtLoanName.Location = New System.Drawing.Point(307, 342)
+        Me.txtLoanName.Location = New System.Drawing.Point(126, 304)
         Me.txtLoanName.Name = "txtLoanName"
         Me.txtLoanName.Size = New System.Drawing.Size(169, 25)
         Me.txtLoanName.TabIndex = 30
@@ -492,6 +500,44 @@ Partial Class frmMainMenu
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'lblLoanLength
+        '
+        Me.lblLoanLength.AutoSize = True
+        Me.lblLoanLength.Location = New System.Drawing.Point(522, 284)
+        Me.lblLoanLength.Name = "lblLoanLength"
+        Me.lblLoanLength.Size = New System.Drawing.Size(120, 17)
+        Me.lblLoanLength.TabIndex = 35
+        Me.lblLoanLength.Text = "LENGTH OF LOAN"
+        '
+        'txtLoanLength
+        '
+        Me.txtLoanLength.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLoanLength.Location = New System.Drawing.Point(482, 305)
+        Me.txtLoanLength.Name = "txtLoanLength"
+        Me.txtLoanLength.ReadOnly = True
+        Me.txtLoanLength.Size = New System.Drawing.Size(191, 25)
+        Me.txtLoanLength.TabIndex = 34
+        Me.txtLoanLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(492, 284)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(169, 17)
+        Me.Label10.TabIndex = 37
+        Me.Label10.Text = "LENGTH OF RESERVATION"
+        '
+        'txtReservationLength
+        '
+        Me.txtReservationLength.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReservationLength.Location = New System.Drawing.Point(482, 305)
+        Me.txtReservationLength.Name = "txtReservationLength"
+        Me.txtReservationLength.ReadOnly = True
+        Me.txtReservationLength.Size = New System.Drawing.Size(191, 25)
+        Me.txtReservationLength.TabIndex = 36
+        Me.txtReservationLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -568,4 +614,8 @@ Partial Class frmMainMenu
     Friend WithEvents txtLoanName As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents DteTmeLoan As DateTimePicker
+    Friend WithEvents lblLoanLength As Label
+    Friend WithEvents txtLoanLength As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtReservationLength As TextBox
 End Class

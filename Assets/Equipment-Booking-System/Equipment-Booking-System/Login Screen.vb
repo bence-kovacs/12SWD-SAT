@@ -63,7 +63,7 @@ Public Class frmLogin
 
     End Sub
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Public Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Try
             'checking if the username and password field is null
 
@@ -102,6 +102,10 @@ Public Class frmLogin
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Exception generated", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+
+        Username = txtUsername.Text
+
+
 
     End Sub
 

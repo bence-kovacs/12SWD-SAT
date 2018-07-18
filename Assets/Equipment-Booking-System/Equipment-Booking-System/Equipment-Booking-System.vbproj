@@ -93,6 +93,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EquipmentInventoryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.vb" />
     <Compile Include="LoanRecordsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

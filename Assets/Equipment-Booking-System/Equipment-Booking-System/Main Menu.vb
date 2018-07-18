@@ -90,4 +90,34 @@ Public Class frmMainMenu
         Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
         MsgBox("Loan Added Successfully")
     End Sub
+
+    Private Sub DteTmeLoanReturn_ValueChanged(sender As Object, e As EventArgs) Handles DteTmeLoanReturn.ValueChanged
+
+        'Calculate length of loan with algorithm
+        Dim LoanDate As Date
+        Dim LoanReturndate As Date
+        Dim LoanDifference As TimeSpan
+        loandate = Convert.ToDateTime(DteTmeLoan.Value)
+        LoanReturndate = Convert.ToDateTime(DteTmeLoanReturn.Value)
+        LoanDifference = LoanReturndate - LoanDate
+        txtLoanLength.Text = FormatNumber(LoanDifference.TotalDays, 0) & " DAYS"
+
+    End Sub
+
+    Private Sub DteTmeReserveReturn_ValueChanged(sender As Object, e As EventArgs) Handles DteTmeReserveReturn.ValueChanged
+
+        'Calculate length of reservation with algorithm
+        Dim ReservationDate As Date
+        Dim ReservationReturnDate As Date
+        Dim ReservationDifference As TimeSpan
+        ReservationDate = Convert.ToDateTime(DteTmeReserve.Value)
+        ReservationReturnDate = Convert.ToDateTime(DteTmeReserveReturn.Value)
+        ReservationDifference = ReservationReturnDate - ReservationDate
+        txtReservationLength.Text = FormatNumber(ReservationDifference.TotalDays, 0) & " DAYS"
+
+    End Sub
+
+    Private Sub txtReserveName_TextChanged(sender As Object, e As EventArgs) Handles txtReserveName.TextChanged
+
+    End Sub
 End Class
