@@ -25,6 +25,11 @@ Public Class frmMainMenu
             .ValueMember = "ID"
             .DataSource = EquipmentData.Tables("Categories")
         End With
+
+        'Fill text usernames on both loan and reserve tabs with username input from login screen
+
+        txtLoanName.Text = Username
+        txtReserveName.Text = Username
     End Sub
 
     Private Sub CmboBxLoanCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmboBxLoanCategory.SelectedIndexChanged
@@ -114,10 +119,6 @@ Public Class frmMainMenu
         ReservationReturnDate = Convert.ToDateTime(DteTmeReserveReturn.Value)
         ReservationDifference = ReservationReturnDate - ReservationDate
         txtReservationLength.Text = FormatNumber(ReservationDifference.TotalDays, 0) & " DAYS"
-
-    End Sub
-
-    Private Sub txtReserveName_TextChanged(sender As Object, e As EventArgs) Handles txtReserveName.TextChanged
 
     End Sub
 End Class

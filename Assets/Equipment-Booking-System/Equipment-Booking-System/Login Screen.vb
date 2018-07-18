@@ -103,7 +103,6 @@ Public Class frmLogin
             MessageBox.Show(ex.Message, "Exception generated", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-        Username = txtUsername.Text
 
 
 
@@ -122,6 +121,10 @@ Public Class frmLogin
         Else
             txtPassword.UseSystemPasswordChar = True
         End If
+    End Sub
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+        Username = txtUsername.Text
     End Sub
 
     '

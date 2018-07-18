@@ -28,6 +28,7 @@ Partial Class Record_Viewer
         Dim EquipmentLabel As System.Windows.Forms.Label
         Dim Loan_DateLabel As System.Windows.Forms.Label
         Dim Return_DateLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Record_Viewer))
         Me.LoanRecordsDataSet = New Equipment_Booking_System.LoanRecordsDataSet()
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
@@ -276,8 +277,9 @@ Partial Class Record_Viewer
         Me.Controls.Add(Me.Loan_DateTextBox)
         Me.Controls.Add(Return_DateLabel)
         Me.Controls.Add(Me.Return_DateTextBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Record_Viewer"
-        Me.Text = "Record_Viewer"
+        Me.Text = "View Records"
         CType(Me.LoanRecordsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LoanRecordsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

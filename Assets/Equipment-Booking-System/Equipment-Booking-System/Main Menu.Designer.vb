@@ -24,12 +24,15 @@ Partial Class frmMainMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMainMenu))
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.btnViewRecords = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtReservationLength = New System.Windows.Forms.TextBox()
         Me.lblReserveName = New System.Windows.Forms.Label()
         Me.txtReserveName = New System.Windows.Forms.TextBox()
         Me.CmboBxReserveEquipment = New System.Windows.Forms.ComboBox()
@@ -37,19 +40,19 @@ Partial Class frmMainMenu
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DteTmeReserveReturn = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnConfirmReservation = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DteTmeReserve = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabLoan = New System.Windows.Forms.TabPage()
+        Me.lblLoanLength = New System.Windows.Forms.Label()
+        Me.txtLoanLength = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DteTmeLoan = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtLoanName = New System.Windows.Forms.TextBox()
         Me.lblLoanDetails = New System.Windows.Forms.Label()
-        Me.btnClearLoan = New System.Windows.Forms.Button()
         Me.btnConfirmLoan = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DteTmeLoanReturn = New System.Windows.Forms.DateTimePicker()
@@ -71,10 +74,6 @@ Partial Class frmMainMenu
         Me.LoanRecordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LoanRecordsTableAdapter = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.LoanRecordsTableAdapter()
         Me.TableAdapterManager = New Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager()
-        Me.lblLoanLength = New System.Windows.Forms.Label()
-        Me.txtLoanLength = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtReservationLength = New System.Windows.Forms.TextBox()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabLoan.SuspendLayout()
@@ -151,7 +150,6 @@ Partial Class frmMainMenu
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.DteTmeReserveReturn)
         Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.btnConfirmReservation)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.DteTmeReserve)
@@ -166,19 +164,39 @@ Partial Class frmMainMenu
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "                       Reserve                       "
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(492, 284)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(169, 17)
+        Me.Label10.TabIndex = 37
+        Me.Label10.Text = "LENGTH OF RESERVATION"
+        '
+        'txtReservationLength
+        '
+        Me.txtReservationLength.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReservationLength.Location = New System.Drawing.Point(458, 305)
+        Me.txtReservationLength.Name = "txtReservationLength"
+        Me.txtReservationLength.ReadOnly = True
+        Me.txtReservationLength.Size = New System.Drawing.Size(236, 25)
+        Me.txtReservationLength.TabIndex = 36
+        Me.txtReservationLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'lblReserveName
         '
         Me.lblReserveName.AutoSize = True
-        Me.lblReserveName.Location = New System.Drawing.Point(181, 284)
+        Me.lblReserveName.Location = New System.Drawing.Point(175, 284)
         Me.lblReserveName.Name = "lblReserveName"
-        Me.lblReserveName.Size = New System.Drawing.Size(46, 17)
+        Me.lblReserveName.Size = New System.Drawing.Size(77, 17)
         Me.lblReserveName.TabIndex = 29
-        Me.lblReserveName.Text = "NAME"
+        Me.lblReserveName.Text = "USERNAME"
         '
         'txtReserveName
         '
         Me.txtReserveName.Location = New System.Drawing.Point(126, 304)
         Me.txtReserveName.Name = "txtReserveName"
+        Me.txtReserveName.ReadOnly = True
         Me.txtReserveName.Size = New System.Drawing.Size(169, 25)
         Me.txtReserveName.TabIndex = 28
         Me.txtReserveName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -231,18 +249,9 @@ Partial Class frmMainMenu
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "RESERVATION DETAILS"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(391, 395)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 44)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Clear"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'btnConfirmReservation
         '
-        Me.btnConfirmReservation.Location = New System.Drawing.Point(264, 395)
+        Me.btnConfirmReservation.Location = New System.Drawing.Point(334, 400)
         Me.btnConfirmReservation.Name = "btnConfirmReservation"
         Me.btnConfirmReservation.Size = New System.Drawing.Size(109, 44)
         Me.btnConfirmReservation.TabIndex = 18
@@ -257,6 +266,7 @@ Partial Class frmMainMenu
         Me.Label4.Size = New System.Drawing.Size(102, 17)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "DATE OF LOAN"
+        Me.Label4.Visible = False
         '
         'DteTmeReserve
         '
@@ -264,6 +274,7 @@ Partial Class frmMainMenu
         Me.DteTmeReserve.Name = "DteTmeReserve"
         Me.DteTmeReserve.Size = New System.Drawing.Size(236, 25)
         Me.DteTmeReserve.TabIndex = 16
+        Me.DteTmeReserve.Visible = False
         '
         'Label5
         '
@@ -293,7 +304,6 @@ Partial Class frmMainMenu
         Me.TabLoan.Controls.Add(Me.Label2)
         Me.TabLoan.Controls.Add(Me.txtLoanName)
         Me.TabLoan.Controls.Add(Me.lblLoanDetails)
-        Me.TabLoan.Controls.Add(Me.btnClearLoan)
         Me.TabLoan.Controls.Add(Me.btnConfirmLoan)
         Me.TabLoan.Controls.Add(Me.Label1)
         Me.TabLoan.Controls.Add(Me.DteTmeLoanReturn)
@@ -308,6 +318,25 @@ Partial Class frmMainMenu
         Me.TabLoan.Size = New System.Drawing.Size(775, 483)
         Me.TabLoan.TabIndex = 0
         Me.TabLoan.Text = "                       Loan                       "
+        '
+        'lblLoanLength
+        '
+        Me.lblLoanLength.AutoSize = True
+        Me.lblLoanLength.Location = New System.Drawing.Point(522, 284)
+        Me.lblLoanLength.Name = "lblLoanLength"
+        Me.lblLoanLength.Size = New System.Drawing.Size(120, 17)
+        Me.lblLoanLength.TabIndex = 35
+        Me.lblLoanLength.Text = "LENGTH OF LOAN"
+        '
+        'txtLoanLength
+        '
+        Me.txtLoanLength.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLoanLength.Location = New System.Drawing.Point(458, 305)
+        Me.txtLoanLength.Name = "txtLoanLength"
+        Me.txtLoanLength.ReadOnly = True
+        Me.txtLoanLength.Size = New System.Drawing.Size(236, 25)
+        Me.txtLoanLength.TabIndex = 34
+        Me.txtLoanLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
@@ -328,16 +357,17 @@ Partial Class frmMainMenu
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(181, 284)
+        Me.Label2.Location = New System.Drawing.Point(176, 284)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 17)
+        Me.Label2.Size = New System.Drawing.Size(77, 17)
         Me.Label2.TabIndex = 31
-        Me.Label2.Text = "NAME"
+        Me.Label2.Text = "USERNAME"
         '
         'txtLoanName
         '
         Me.txtLoanName.Location = New System.Drawing.Point(126, 304)
         Me.txtLoanName.Name = "txtLoanName"
+        Me.txtLoanName.ReadOnly = True
         Me.txtLoanName.Size = New System.Drawing.Size(169, 25)
         Me.txtLoanName.TabIndex = 30
         Me.txtLoanName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -352,18 +382,9 @@ Partial Class frmMainMenu
         Me.lblLoanDetails.TabIndex = 22
         Me.lblLoanDetails.Text = "LOAN DETAILS"
         '
-        'btnClearLoan
-        '
-        Me.btnClearLoan.Location = New System.Drawing.Point(391, 395)
-        Me.btnClearLoan.Name = "btnClearLoan"
-        Me.btnClearLoan.Size = New System.Drawing.Size(109, 44)
-        Me.btnClearLoan.TabIndex = 19
-        Me.btnClearLoan.Text = "Clear"
-        Me.btnClearLoan.UseVisualStyleBackColor = True
-        '
         'btnConfirmLoan
         '
-        Me.btnConfirmLoan.Location = New System.Drawing.Point(264, 395)
+        Me.btnConfirmLoan.Location = New System.Drawing.Point(334, 400)
         Me.btnConfirmLoan.Name = "btnConfirmLoan"
         Me.btnConfirmLoan.Size = New System.Drawing.Size(109, 44)
         Me.btnConfirmLoan.TabIndex = 18
@@ -500,44 +521,6 @@ Partial Class frmMainMenu
         Me.TableAdapterManager.LoanRecordsTableAdapter = Me.LoanRecordsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Equipment_Booking_System.LoanRecordsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'lblLoanLength
-        '
-        Me.lblLoanLength.AutoSize = True
-        Me.lblLoanLength.Location = New System.Drawing.Point(522, 284)
-        Me.lblLoanLength.Name = "lblLoanLength"
-        Me.lblLoanLength.Size = New System.Drawing.Size(120, 17)
-        Me.lblLoanLength.TabIndex = 35
-        Me.lblLoanLength.Text = "LENGTH OF LOAN"
-        '
-        'txtLoanLength
-        '
-        Me.txtLoanLength.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLoanLength.Location = New System.Drawing.Point(482, 305)
-        Me.txtLoanLength.Name = "txtLoanLength"
-        Me.txtLoanLength.ReadOnly = True
-        Me.txtLoanLength.Size = New System.Drawing.Size(191, 25)
-        Me.txtLoanLength.TabIndex = 34
-        Me.txtLoanLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(492, 284)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(169, 17)
-        Me.Label10.TabIndex = 37
-        Me.Label10.Text = "LENGTH OF RESERVATION"
-        '
-        'txtReservationLength
-        '
-        Me.txtReservationLength.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReservationLength.Location = New System.Drawing.Point(482, 305)
-        Me.txtReservationLength.Name = "txtReservationLength"
-        Me.txtReservationLength.ReadOnly = True
-        Me.txtReservationLength.Size = New System.Drawing.Size(191, 25)
-        Me.txtReservationLength.TabIndex = 36
-        Me.txtReservationLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -546,8 +529,10 @@ Partial Class frmMainMenu
         Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.TbCntrl)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMainMenu"
-        Me.Text = "Media Equipment Booking System"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Equipment Booker"
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -572,7 +557,6 @@ Partial Class frmMainMenu
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents btnConfirmReservation As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents DteTmeReserve As DateTimePicker
@@ -580,7 +564,6 @@ Partial Class frmMainMenu
     Friend WithEvents Label6 As Label
     Private WithEvents TabLoan As TabPage
     Friend WithEvents lblLoanDetails As Label
-    Friend WithEvents btnClearLoan As Button
     Friend WithEvents btnConfirmLoan As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DteTmeLoanReturn As DateTimePicker
