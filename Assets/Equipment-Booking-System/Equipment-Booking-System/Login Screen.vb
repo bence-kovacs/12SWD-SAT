@@ -102,6 +102,7 @@ Public Class frmLogin
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Exception generated", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+
     End Sub
 
     ' declaring a method for clearing the controls
