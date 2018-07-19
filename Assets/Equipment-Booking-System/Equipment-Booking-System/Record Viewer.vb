@@ -1,23 +1,14 @@
 ﻿Public Class Record_Viewer
-    'Private Sub LoanRecordsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-    '    Me.Validate()
-    '    Me.LoanRecordsBindingSource.EndEdit()
-    '    Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)
-
-    'End Sub
-
     Private Sub Record_Viewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'LoanRecordsDataSet.LoanRecords' table. You can move, or remove it, as needed.
+        'Load data into table
         Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
     End Sub
-
-    'Search function
     Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+        'Search function
         Me.LoanRecordsBindingSource.Filter = "[Equipment] = '" & Me.txtFind.Text & " ' "
     End Sub
-
-    'Saves entries
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        'Saves entries
         Me.Validate()
         Me.LoanRecordsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.LoanRecordsDataSet)

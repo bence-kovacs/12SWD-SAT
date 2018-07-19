@@ -6,8 +6,6 @@ Public Class frmMainMenu
     Private EquipmentData As DataSet
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ''TODO: This line of code loads data into the 'LoanRecordsDataSet.LoanRecords' table. You can move, or remove it, as needed.
-        ''Me.LoanRecordsTableAdapter.Fill(Me.LoanRecordsDataSet.LoanRecords)
 
         ''Load data
         EquipmentData = EquipmentInventory.CreateDataSet()
@@ -73,12 +71,12 @@ Public Class frmMainMenu
         MsgBox("Reservation Added Successfully")
 
     End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnViewRecords.Click
+        'Button to show the record viewer
         Record_Viewer.Show()
     End Sub
-
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        'Log out button which closes everything
         Me.Close()
         Record_Viewer.Close()
         frmLogin.Close()

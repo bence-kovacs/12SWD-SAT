@@ -1,23 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmLogin
-
-
-
-    ''Switching forms on the click of the submit button TEMP
-    'Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-    '    frmMainMenu.Show()
-    '    Me.Hide()
-    'End Sub
-
-
-    'Close button label thingo
+    'Close button label
     Private Sub lblClose_Click(sender As Object, e As EventArgs) Handles lblClose.Click
         Me.Close()
     End Sub
 
     '
     '
-    'Make username and password fields have relevent descriptions in them when input
+    'Make username and password fields have relevent descriptions in them when lostfocus
     '
     '
 
@@ -50,7 +40,7 @@ Public Class frmLogin
     End Sub
     ''
     ''
-    ''PASSWORDING
+    ''CONNECTING TO PASSWORD DATABASE
     ''
     ''
 
@@ -123,6 +113,7 @@ Public Class frmLogin
         End If
     End Sub
 
+    'Storing username input as a string for later
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         Username = txtUsername.Text
     End Sub
