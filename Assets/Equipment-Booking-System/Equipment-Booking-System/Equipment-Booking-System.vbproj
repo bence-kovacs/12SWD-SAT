@@ -141,6 +141,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UsersDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UsersDataSet.vb">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login Screen.resx">

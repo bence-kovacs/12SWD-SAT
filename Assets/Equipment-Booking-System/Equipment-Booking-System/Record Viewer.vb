@@ -7,7 +7,7 @@
         'Search function
         Me.LoanRecordsBindingSource.Filter = "[Equipment] = '" & Me.txtFind.Text & " ' "
     End Sub
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub btnSave_Click(sender As Object, e As EventArgs)
         'Saves entries
         Me.Validate()
         Me.LoanRecordsBindingSource.EndEdit()

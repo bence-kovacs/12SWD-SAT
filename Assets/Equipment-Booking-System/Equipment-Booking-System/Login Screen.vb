@@ -118,6 +118,11 @@ Public Class frmLogin
         Username = txtUsername.Text
     End Sub
 
+    Private Sub btnBypass_Click(sender As Object, e As EventArgs) Handles btnBypass.Click
+        Me.Hide()
+        frmMainMenu.Show()
+    End Sub
+
     '
     ''''''''PROBLEMS''''''''''''
     'HIGHLIGHTING OF TEXT IN USERNAME FIELD ON STARTUP
